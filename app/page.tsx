@@ -1,9 +1,8 @@
 import Hero from "@/components/sections/Hero";
+import StatBand from "@/components/sections/StatBand";
 import About from "@/components/sections/About";
 import Skills from "@/components/sections/Skills";
-import Experience from "@/components/sections/Experience";
 import CaseStudy from "@/components/sections/CaseStudy";
-import SocialProof from "@/components/sections/SocialProof";
 import InstagramInsights from "@/components/sections/InstagramInsights";
 import Photography from "@/components/sections/Photography";
 import Music from "@/components/sections/Music";
@@ -13,11 +12,10 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <StatBand />
       <About />
       <Skills />
-      <Experience />
       <CaseStudy />
-      <SocialProof />
       <InstagramInsights />
       <Photography />
       <Music />

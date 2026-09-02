@@ -6,8 +6,8 @@
   --color-ink-line: #232326;
   --color-paper: #f4f1ea;
   --color-paper-dim: #b9b6ae;
-  --color-accent: #ff5a2b;
-  --color-accent-dim: #7a3115;
+  --color-accent: #c2452b;
+  --color-accent-dim: #5c2015;
 }
 
 @theme inline {
@@ -106,7 +106,7 @@ body {
   }
 }
 
-section[id] {
+[id] {
   scroll-margin-top: 84px;
 }
 

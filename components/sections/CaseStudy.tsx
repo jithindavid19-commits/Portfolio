@@ -19,7 +19,7 @@ export default function CaseStudy() {
   }
 
   return (
-    <div className="relative border-t border-ink-line bg-ink-raised py-24 md:py-36">
+    <div id="work" className="relative border-t border-ink-line bg-ink-raised py-24 md:py-36">
       <div className="mx-auto max-w-7xl px-6 md:px-10">
         <div className="mb-10 flex flex-wrap items-center justify-between gap-6">
           <div>
@@ -38,18 +38,28 @@ export default function CaseStudy() {
 
           <div className="flex gap-2">
             {caseStudies.map((c, i) => (
-              <button
+              <motion.button
                 key={c.slug}
                 onClick={() => selectCase(i)}
-                className={`border px-4 py-2 font-mono text-[11px] uppercase tracking-[0.16em] transition-colors ${
+                whileTap={{ scale: 0.94 }}
+                className={`relative overflow-hidden border px-4 py-2 font-mono text-[11px] uppercase tracking-[0.16em] transition-colors ${
                   activeCase === i
-                    ? "border-accent bg-accent text-ink"
+                    ? "border-accent text-ink"
                     : "border-ink-line text-paper-dim hover:border-paper-dim hover:text-paper"
                 }`}
                 data-cursor="magnetic"
               >
-                {String(i + 1).padStart(2, "0")} — {c.title.split(" × ")[0]}
-              </button>
+                {activeCase === i && (
+                  <motion.span
+                    layoutId="case-tab-bg"
+                    className="absolute inset-0 bg-accent"
+                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                  />
+                )}
+                <span className="relative">
+                  {String(i + 1).padStart(2, "0")} — {c.title.split(" × ")[0]}
+                </span>
+              </motion.button>
             ))}
           </div>
         </div>
@@ -67,13 +77,14 @@ export default function CaseStudy() {
                 const isOpen = openStage === i;
                 return (
                   <div key={stage.label}>
-                    <button
+                    <motion.button
                       onClick={() => setOpenStage(isOpen ? -1 : i)}
+                      whileTap={{ scale: 0.99 }}
                       className="flex w-full items-center justify-between gap-6 py-6 text-left"
                       aria-expanded={isOpen}
                     >
                       <span className="flex items-center gap-5">
-                        <span className="font-mono text-xs text-accent">
+                        <span className={`font-mono text-xs transition-colors ${isOpen ? "text-accent" : "text-paper-dim"}`}>
                           {String(i + 1).padStart(2, "0")}
                         </span>
                         <span className="font-display text-xl text-paper md:text-2xl">
@@ -81,14 +92,14 @@ export default function CaseStudy() {
                         </span>
                       </span>
                       <motion.span
-                        animate={{ rotate: isOpen ? 45 : 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="font-mono text-xl text-paper-dim"
+                        animate={{ rotate: isOpen ? 45 : 0, scale: isOpen ? 1.15 : 1 }}
+                        transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                        className={`font-mono text-xl transition-colors ${isOpen ? "text-accent" : "text-paper-dim"}`}
                         aria-hidden
                       >
                         +
                       </motion.span>
-                    </button>
+                    </motion.button>
                     <AnimatePresence initial={false}>
                       {isOpen && (
                         <motion.div
@@ -98,9 +109,14 @@ export default function CaseStudy() {
                           transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                           className="overflow-hidden"
                         >
-                          <p className="max-w-3xl pb-7 pl-0 text-[15px] leading-relaxed text-paper-dim md:pl-10 md:text-base">
+                          <motion.p
+                            initial={{ y: -8 }}
+                            animate={{ y: 0 }}
+                            transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+                            className="max-w-3xl border-l-2 border-accent/40 pb-7 pl-5 text-[15px] leading-relaxed text-paper-dim md:pl-10 md:text-base"
+                          >
                             {stage.text}
-                          </p>
+                          </motion.p>
                         </motion.div>
                       )}
                     </AnimatePresence>

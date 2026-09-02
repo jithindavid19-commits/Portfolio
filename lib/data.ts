@@ -109,55 +109,16 @@ export const skills = {
   ],
 };
 
-export type ExperienceEntry = {
-  role: string;
-  org: string;
-  period: string;
-  summary: string;
-  achievements: string[];
-};
-
-export const experience: ExperienceEntry[] = [
-  {
-    role: "Marketing Executive",
-    org: "Qyuki (Remote)",
-    period: "March 2024 — Present",
-    summary:
-      "Owning client campaigns end to end — from brief to final delivery — across a rotating portfolio of accounts.",
-    achievements: [
-      "Managed 8–12 client accounts per campaign cycle, consistently hitting 100% delivery KPIs through proactive scheduling and strategic follow-ups.",
-      "Grew the partner database from 300 to 450+ contacts — a 25% increase in partnership opportunities — through consultative outreach.",
-      "Delivered 4 end-to-end campaigns, managing the customer journey from initial brief to final execution while maintaining a high standard of client service.",
-      "Used Excel, Trello and Canva to track KPIs, coordinate deliverables and present tailored marketing solutions to clients.",
-    ],
-  },
-  {
-    role: "Influencer Marketing",
-    org: "Tring",
-    period: "July 2022 — April 2023",
-    summary:
-      "Ran creator discovery, onboarding and performance analysis for influencer campaigns end to end.",
-    achievements: [
-      "Managed influencer onboarding and contracts for 10+ creators per campaign, tracking timelines and deliverables in Excel.",
-      "Built and maintained an Excel-based database of 500+ creators, improving brand–creator matching and campaign readiness.",
-      "Executed 3+ influencer marketing campaigns in collaboration with brand and operations teams using Canva.",
-      "Conducted content research and trend analysis using Perplexity to support campaign planning and execution.",
-      "Analysed influencer performance across 60+ posts — tracking reach, impressions and engagement — to identify high-performing creators for repeat collaborations.",
-    ],
-  },
-  {
-    role: "Talent Management",
-    org: "Aspiring Productions (Reality Show)",
-    period: "May 2022 — December 2022",
-    summary:
-      "Sourced and coordinated talent at scale for a reality TV production, building the systems that kept auditions on schedule.",
-    achievements: [
-      "Sourced and managed 300+ talents via Facebook, Instagram and YouTube, tracking details and application status in Excel.",
-      "Executed online auditions for 250+ participants, recording scores, feedback and shortlisting decisions in structured sheets.",
-      "Collaborated with 4–6 production team members to coordinate audition schedules and availability.",
-      "Introduced a centralised Excel tracking system, reducing turnaround time by 40% and streamlining audition operations.",
-    ],
-  },
+// A compact proof-of-credibility band shown right under the hero, in place
+// of a full job-history section (Jithin's CV covers that in detail — see
+// the Download CV link in Contact). Every figure here is real, drawn
+// directly from the CV: Qyuki (campaigns delivered), Tring (creator
+// database + performance analysis), Aspiring Productions (turnaround).
+export const statBand = [
+  { value: "500+", label: "Creators Managed" },
+  { value: "4", label: "Campaigns Delivered" },
+  { value: "60+", label: "Posts Analysed" },
+  { value: "40%", label: "Faster Turnaround" },
 ];
 
 export type CaseStudy = {
@@ -306,26 +267,16 @@ export const caseStudies: CaseStudy[] = [
   },
 ];
 
-export const socialProof = {
-  eyebrow: "Proof of Work",
-  title: "Social & Content",
-  description:
-    "A running feed of the content and campaigns behind the numbers — Instagram grids and the creative that went with them.",
-  assets: [
-    { label: "Instagram profile & grid", path: "/assets/social/profile-grid.jpg" },
-    { label: "Content grid", path: "/assets/social/content-grid.jpg" },
-  ],
-};
-
 // Real Instagram account-insights figures (30-day window unless noted),
 // sourced directly from Jithin's own analytics screenshots — nothing here
 // is estimated or invented.
 export const instagramInsights = {
-  eyebrow: "Account Insights",
+  eyebrow: "Proof of Work",
   title: "Reading the numbers",
   description:
     "Views, audience makeup and content mix from the last 30 days — the same data used to decide what to make next.",
   period: "Last 30 days",
+  reelGrid: { label: "Reel & content grid", path: "/assets/social/content-grid.jpg" },
   stats: [
     { label: "Views", value: "4,723" },
     { label: "Interactions", value: "117" },

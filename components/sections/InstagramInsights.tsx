@@ -1,6 +1,7 @@
 import { instagramInsights } from "@/lib/data";
 import { Reveal } from "@/components/ui/Reveal";
 import { SplitBar, RankedBars, Sparkline } from "@/components/ui/InsightBars";
+import Frame from "@/components/ui/Frame";
 
 export default function InstagramInsights() {
   const d = instagramInsights;
@@ -19,8 +20,18 @@ export default function InstagramInsights() {
         </div>
 
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
-          <Reveal className="lg:col-span-5">
-            <div className="grid grid-cols-2 gap-px overflow-hidden border border-ink-line bg-ink-line md:grid-cols-4 lg:grid-cols-2">
+          <Reveal className="lg:col-span-3">
+            <Frame
+              src={d.reelGrid.path}
+              alt={d.reelGrid.label}
+              label={d.reelGrid.label}
+              index="01"
+              className="aspect-[4/5] w-full"
+            />
+          </Reveal>
+
+          <Reveal delay={0.05} className="lg:col-span-4">
+            <div className="grid grid-cols-2 gap-px overflow-hidden border border-ink-line bg-ink-line">
               {d.stats.map((s) => (
                 <div key={s.label} className="bg-ink-raised p-5">
                   <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-paper-dim">
@@ -40,8 +51,8 @@ export default function InstagramInsights() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.1} className="lg:col-span-7">
-            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+          <Reveal delay={0.1} className="lg:col-span-5">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
               <div className="border border-ink-line p-6">
                 <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.14em] text-paper-dim">
                   Viewer split

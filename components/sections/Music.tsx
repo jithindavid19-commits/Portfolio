@@ -7,7 +7,7 @@ export default function Music() {
     <section id="music" className="relative border-t border-ink-line bg-ink-raised py-24 md:py-36">
       <div className="mx-auto max-w-7xl px-6 md:px-10">
         <div className="mb-14 flex items-center gap-4">
-          <span className="font-mono text-xs uppercase tracking-[0.3em] text-accent">05</span>
+          <span className="font-mono text-xs uppercase tracking-[0.3em] text-accent">04</span>
           <span className="h-px flex-1 max-w-16 bg-ink-line" />
           <span className="font-mono text-xs uppercase tracking-[0.3em] text-paper-dim">
             {music.eyebrow}

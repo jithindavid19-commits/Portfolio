@@ -30,9 +30,10 @@ export default function Skills() {
           <div className="lg:col-span-4">
             <div className="flex flex-row gap-2 overflow-x-auto lg:flex-col lg:gap-1">
               {skills.categories.map((cat, i) => (
-                <button
+                <motion.button
                   key={cat.key}
                   onClick={() => setActive(i)}
+                  whileTap={{ scale: 0.96 }}
                   className={`relative shrink-0 rounded-none px-5 py-4 text-left font-mono text-xs uppercase tracking-[0.16em] transition-colors ${
                     active === i ? "text-ink" : "text-paper-dim hover:text-paper"
                   }`}
@@ -46,7 +47,7 @@ export default function Skills() {
                     />
                   )}
                   <span className="relative">{cat.label}</span>
-                </button>
+                </motion.button>
               ))}
             </div>
           </div>

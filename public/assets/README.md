@@ -13,8 +13,7 @@ Already in place:
 - `photography/city-02.jpg` ✅ (Edinburgh, twilight)
 - `photography/music-01.jpg` ✅ (festival crowd + stage lighting)
 - `photography/music-02.jpg` ✅ (festival laser show)
-- `social/profile-grid.jpg` ✅ (Instagram profile grid)
-- `social/content-grid.jpg` ✅ (Instagram content grid, with view counts)
+- `social/content-grid.jpg` ✅ (Instagram reel/content grid, with view counts)
 - `music/djing-poster.jpg` ✅ (real DJ photo — Pent Houzz — shown with a
   "Video coming soon" badge until `music/djing.mp4` lands)
 - `campaigns/eleve-assignment.pdf` ✅ (full eleve × Airtel Xstream Box deck)
@@ -39,10 +38,10 @@ If you'd rather show slide images instead of/alongside the PDF, add entries
 like `{ type: "image", label: "...", path: "/assets/campaigns/eleve-01.jpg" }`
 to that study's `assets` array in `lib/data.ts` and drop the matching file here.
 
-## Social / Proof of Work — Instagram grid
+## Proof of Work — reel grid + Instagram insights
 Account-insights numbers are already live as native stat tiles (see
-`lib/data.ts` → `instagramInsights`), and both the profile grid and content
-grid are in. Nothing pending here.
+`lib/data.ts` → `instagramInsights`), shown alongside the reel/content grid.
+Nothing pending here.
 
 ## Music / DJing
 - `music/djing.mp4` — the DJ video, still pending. Keep it web-optimised
