@@ -23,25 +23,22 @@ at `photography/<label>-0N.jpg` and add a matching entry to
 Any orientation works — the gallery crops to fit. Highest resolution version
 you have (min. 1600px on the long edge) for a crisp full-bleed look.
 
-## Campaign 1 — "eleve" (Influencer Marketing case study)
-- `campaigns/eleve-01.jpg` — brand/campaign deck screenshot
-- `campaigns/eleve-02.jpg` — creator brief / caption doc
-- `campaigns/eleve-03.jpg` — campaign creative
-- `campaigns/eleve-campaign.pdf` — the full campaign PDF (opens in a new tab
-  via the "View Campaign PDF" button)
+## "How I Think" — take-home strategy assignments
+These are interview case studies, not executed campaigns (see `lib/data.ts`
+for the honest framing). Each just needs its PDF export:
+- `campaigns/airtel-xstream-assignment.pdf` — the full Airtel Xstream Box deck
+- `campaigns/eleve-assignment.pdf` — the full eleve deck
 
-## Campaign 2 — second creator partnership campaign
-- `campaigns/campaign-two-01.jpg` — brand identity
-- `campaigns/campaign-two-02.jpg` — campaign document
-- `campaigns/campaign-two-03.jpg` — campaign document
+If you'd rather show slide images instead of/alongside the PDF, add entries
+like `{ type: "image", label: "...", path: "/assets/campaigns/airtel-xstream-01.jpg" }`
+to that study's `assets` array in `lib/data.ts` and drop the matching file here.
 
-## Social / Proof of Work — Instagram grid + analytics
+## Social / Proof of Work — Instagram grid
+Account-insights numbers are already live as native stat tiles (see
+`lib/data.ts` → `instagramInsights`). Still pending — just the profile/content
+grid screenshots:
 - `social/profile-grid.jpg` — Instagram profile screenshot
 - `social/content-grid.jpg` — content grid screenshot
-- `social/insights-overview.jpg` — account insights overview
-- `social/insights-growth.jpg` — follower growth over time
-- `social/insights-audience.jpg` — gender / age range breakdown
-- `social/insights-content.jpg` — 30-day content performance
 
 ## Music / DJing
 - `music/djing.mp4` — the DJ video. Keep it web-optimised (H.264, under

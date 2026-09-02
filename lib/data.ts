@@ -162,59 +162,69 @@ export const experience: ExperienceEntry[] = [
 
 export type CaseStudy = {
   slug: string;
-  client: string;
-  role: string;
+  title: string;
+  context: string;
   tagline: string;
-  brief: string;
-  approach: string;
-  discovery: string;
-  execution: string;
-  reporting: string;
+  stages: { label: string; text: string }[];
+  creatorGroups?: { category: string; names: string[] }[];
   assets: { type: "image" | "pdf"; label: string; path: string }[];
 };
 
+// Both of these were take-home strategy assignments submitted as part of
+// interview processes — not executed client campaigns. Framed honestly:
+// real research and real strategic thinking, no invented results.
 export const caseStudies: CaseStudy[] = [
   {
-    slug: "eleve",
-    client: "eleve",
-    role: "Influencer Research & Campaign Management",
-    tagline: "Driving brand awareness through strategic creator partnerships.",
-    brief:
-      "Build brand awareness for eleve through a creator-led campaign rather than traditional paid media — putting the right creators in front of the right audience.",
-    approach:
-      "Led with research: understanding the brand's positioning and audience before sourcing a single creator, then building a shortlist matched on relevance, not just reach.",
-    discovery:
-      "Sourced and vetted creators against the brand's audience and tone from Tring's 500+ creator database, narrowing to the strongest fits for outreach.",
-    execution:
-      "Coordinated briefs, content approval and delivery timelines with each creator, keeping the campaign on schedule from kickoff to publish.",
-    reporting:
-      "Tracked reach, impressions and engagement post-campaign using Excel and platform analytics to flag the creators worth re-engaging.",
+    slug: "airtel-xstream",
+    title: "Airtel Xstream Box",
+    context: "Take-home assignment — Influencer Marketing Team Lead interview",
+    tagline: "Building a full influencer strategy from a single brief — audience, message and a real creator shortlist.",
+    stages: [
+      {
+        label: "The Brief",
+        text: "Submitted as a take-home case study for an Influencer Marketing Team Lead interview: build an end-to-end influencer strategy for Airtel Xstream Box — audience, messaging, creator selection and estimated costs — from a single-line brief.",
+      },
+      {
+        label: "The Approach",
+        text: "Targeted two segments — DINK couples (28–35) and mid-age couples (45+) — around the line \"Jo Dekha Bada Dekho\" (\"Experience More with Airtel Xstream\"), briefing creators to demonstrate the real entertainment pain points Xstream Box solves rather than just list its features.",
+      },
+      {
+        label: "Creator Selection",
+        text: "Shortlisted 15 creators across five genres matched to the two audiences — Lifestyle, Tech, Mom, Travel Couple and TV Celebrities — prioritising audience fit over raw follower count, then estimated commercials for each recommended creator.",
+      },
+    ],
+    creatorGroups: [
+      { category: "Lifestyle", names: ["Aashna Malani", "Deeksha Mishra", "Komal Pandey"] },
+      { category: "Tech", names: ["Technical Guruji", "Shlok Srivastava", "Beebom"] },
+      { category: "Mom", names: ["Ritu Rathee", "Harpreeth Suri", "Simone Khambatta"] },
+      { category: "Travel Couple", names: ["Daisy & Ankit", "Savi & Vid", "Prachi & Harsh"] },
+      { category: "TV Celebrities", names: ["Karan Wahi", "Jay Bhanushali", "Bharti Singh"] },
+    ],
     assets: [
-      { type: "image", label: "Campaign brand deck", path: "/assets/campaigns/eleve-01.jpg" },
-      { type: "image", label: "Creator brief / caption doc", path: "/assets/campaigns/eleve-02.jpg" },
-      { type: "image", label: "Campaign creative", path: "/assets/campaigns/eleve-03.jpg" },
-      { type: "pdf", label: "Full campaign PDF", path: "/assets/campaigns/eleve-campaign.pdf" },
+      { type: "pdf", label: "Full assignment PDF", path: "/assets/campaigns/airtel-xstream-assignment.pdf" },
     ],
   },
   {
-    slug: "campaign-two",
-    client: "Creator Partnership Campaign",
-    role: "Influencer Research & Campaign Management",
-    tagline: "Driving brand awareness through strategic creator partnerships.",
-    brief:
-      "A second creator-partnership campaign run in the same influencer-research-to-delivery model — from brand brief to published creator content.",
-    approach:
-      "Applied the same research-first process: understand the brand, define the audience, then build a creator shortlist around fit.",
-    discovery:
-      "Identified and shortlisted creators aligned to the brand's category and tone from the existing creator database.",
-    execution:
-      "Managed onboarding, deliverable timelines and creative approval across the creator roster through to publish.",
-    reporting:
-      "Reviewed post-performance to understand what resonated, feeding learnings back into future creator selection.",
+    slug: "eleve",
+    title: "eleve",
+    context: "Take-home assignment — Influencer Marketing interview",
+    tagline: "A framework for how to think about influencer selection — not just who to pick, but why.",
+    stages: [
+      {
+        label: "The Brief",
+        text: "Submitted as part of an interview process for eleve, alongside strategy decks for three brand scenarios — Pillsbury Pancake Mix, BBLUNT #BoycottBoycut and CIPLA Breathefree — answering: what parameters, qualitative and quantitative, do you use to shortlist influencers, and why does each matter?",
+      },
+      {
+        label: "Qualitative Parameters",
+        text: "Relevance — how closely a creator's content aligns with the brand's values and message. Authenticity — the genuineness of their connection with followers, which is what makes a collaboration land. Platform suitability — choosing creators active where the target audience actually is.",
+      },
+      {
+        label: "Quantitative Parameters",
+        text: "Reach — audience size and potential exposure. Engagement — how well a creator captivates and connects with their followers. Demographics — alignment between a creator's audience and the brand's target market. Previous campaigns — a track record that signals reliability and fit.",
+      },
+    ],
     assets: [
-      { type: "image", label: "Brand identity", path: "/assets/campaigns/campaign-two-01.jpg" },
-      { type: "image", label: "Campaign document", path: "/assets/campaigns/campaign-two-02.jpg" },
-      { type: "image", label: "Campaign document", path: "/assets/campaigns/campaign-two-03.jpg" },
+      { type: "pdf", label: "Full assignment PDF", path: "/assets/campaigns/eleve-assignment.pdf" },
     ],
   },
 ];
