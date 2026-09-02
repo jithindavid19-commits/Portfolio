@@ -6,18 +6,20 @@ shows a styled placeholder plate instead of a broken image.
 
 Already in place:
 - `/public/JITHIN_GEORGE_CV.pdf` ✅
+- `photography/portrait.jpg` ✅ (About section headshot)
 - `photography/travel-01.jpg` ✅ (Thailand longtail boats)
 - `photography/nature-01.jpg` ✅ (Scottish highlands stream)
 - `photography/city-01.jpg` ✅ (Liverpool, sunset)
 - `photography/city-02.jpg` ✅ (Edinburgh, twilight)
 - `photography/music-01.jpg` ✅ (festival crowd + stage lighting)
-
-## Portrait — About section
-- `photography/portrait.jpg` — vertical, ~4:5 crop, headshot/portrait.
+- `photography/music-02.jpg` ✅ (festival laser show)
+- `social/profile-grid.jpg` ✅ (Instagram profile grid)
+- `music/djing-poster.jpg` ✅ (real DJ photo — Pent Houzz — shown with a
+  "Video coming soon" badge until `music/djing.mp4` lands)
 
 ## Photography — Creative section (editorial gallery)
-Currently 5 real photos are wired in (see above). To add more, drop a file
-at `photography/<label>-0N.jpg` and add a matching entry to
+6 real photos are wired in (see above). To add more, drop a file at
+`photography/<label>-0N.jpg` and add a matching entry to
 `photography.categories` in `lib/data.ts`.
 
 Any orientation works — the gallery crops to fit. Highest resolution version
@@ -35,16 +37,15 @@ to that study's `assets` array in `lib/data.ts` and drop the matching file here.
 
 ## Social / Proof of Work — Instagram grid
 Account-insights numbers are already live as native stat tiles (see
-`lib/data.ts` → `instagramInsights`). Still pending — just the profile/content
-grid screenshots:
-- `social/profile-grid.jpg` — Instagram profile screenshot
+`lib/data.ts` → `instagramInsights`), and the profile grid is in. Still
+pending:
 - `social/content-grid.jpg` — content grid screenshot
 
 ## Music / DJing
-- `music/djing.mp4` — the DJ video. Keep it web-optimised (H.264, under
-  ~30MB) so it loads fast; the player uses native browser controls.
-- `music/djing-poster.jpg` — a still frame from the video, shown before
-  playback starts.
+- `music/djing.mp4` — the DJ video, still pending. Keep it web-optimised
+  (H.264, under ~30MB) so it loads fast; the player uses native browser
+  controls. Until it's added, the real DJ photo (`djing-poster.jpg`) shows
+  instead with a "Video coming soon" badge.
 
 ---
 

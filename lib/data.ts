@@ -291,6 +291,7 @@ export const photography = {
     { key: "city", label: "City", path: "/assets/photography/city-01.jpg" },
     { key: "nature", label: "Nature", path: "/assets/photography/nature-01.jpg" },
     { key: "city-2", label: "City", path: "/assets/photography/city-02.jpg" },
+    { key: "music-2", label: "Music", path: "/assets/photography/music-02.jpg" },
   ],
 };
 
