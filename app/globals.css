@@ -1,13 +1,17 @@
 @import "tailwindcss";
 
+/* Warm cream editorial theme (Daniel James reference). Token names are
+ * kept as-is for minimal churn across components — "ink" now means the
+ * light background surface and "paper" means the dark foreground/text,
+ * i.e. the roles are inverted from a literal reading of the names. */
 :root {
-  --color-ink: #0a0a0b;
-  --color-ink-raised: #131315;
-  --color-ink-line: #232326;
-  --color-paper: #f4f1ea;
-  --color-paper-dim: #b9b6ae;
-  --color-accent: #c2452b;
-  --color-accent-dim: #5c2015;
+  --color-ink: #f1eae0;
+  --color-ink-raised: #e8dfcd;
+  --color-ink-line: #d9cebb;
+  --color-paper: #1d1712;
+  --color-paper-dim: #6e655a;
+  --color-accent: #a83c24;
+  --color-accent-dim: #7a2c1a;
 }
 
 @theme inline {
@@ -37,7 +41,7 @@
 
 html {
   background: var(--color-ink);
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 body {
@@ -67,12 +71,12 @@ body {
     background: var(--color-ink);
   }
   ::-webkit-scrollbar-thumb {
-    background: var(--color-ink-line);
+    background: var(--color-paper-dim);
     border-radius: 999px;
     border: 2px solid var(--color-ink);
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: var(--color-accent-dim);
+    background: var(--color-accent);
   }
 }
 

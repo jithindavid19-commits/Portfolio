@@ -63,7 +63,7 @@ export default function VideoFrame({ src, poster, label, className = "" }: Video
           className="pointer-events-none absolute inset-0 opacity-[0.35]"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(135deg, transparent, transparent 10px, rgba(244,241,234,0.04) 10px, rgba(244,241,234,0.04) 11px)",
+              "repeating-linear-gradient(135deg, transparent, transparent 10px, rgba(29,23,18,0.06) 10px, rgba(29,23,18,0.06) 11px)",
           }}
         />
         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" className="relative text-accent">

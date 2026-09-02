@@ -30,7 +30,7 @@ export default function Hero() {
         className="pointer-events-none absolute inset-0 opacity-[0.05]"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(244,241,234,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(244,241,234,0.6) 1px, transparent 1px)",
+            "linear-gradient(rgba(29,23,18,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(29,23,18,0.5) 1px, transparent 1px)",
           backgroundSize: "64px 64px",
         }}
         aria-hidden

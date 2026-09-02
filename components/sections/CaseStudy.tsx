@@ -34,6 +34,17 @@ export default function CaseStudy() {
             <p className="mt-3 font-mono text-xs uppercase tracking-[0.14em] text-paper-dim">
               {study.context}
             </p>
+            {pdf && (
+              <a
+                href={pdf.path}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-5 inline-flex items-center gap-2 bg-accent px-5 py-3 font-mono text-[11px] uppercase tracking-[0.16em] text-ink transition-transform hover:scale-[1.03]"
+                data-cursor="magnetic"
+              >
+                Open Full Campaign PDF ↗
+              </a>
+            )}
           </div>
 
           <div className="flex gap-2">
