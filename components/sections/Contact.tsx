@@ -12,7 +12,7 @@ const LINKS = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative overflow-hidden border-t border-ink-line bg-ink py-28 md:py-40">
+    <section id="contact" className="theme-inverted relative overflow-hidden border-t border-ink-line bg-ink py-28 md:py-40">
       <div
         className="pointer-events-none absolute left-1/2 top-0 h-[50vmax] w-[50vmax] -translate-x-1/2 -translate-y-1/3 rounded-full opacity-[0.12] blur-[120px]"
         style={{ background: "radial-gradient(circle, var(--color-accent), transparent 65%)" }}

@@ -18,7 +18,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-[100svh] flex-col overflow-hidden bg-ink pt-20"
+      className="theme-inverted relative flex min-h-[100svh] flex-col overflow-hidden bg-ink pt-20"
     >
       {/* ambient accent glow */}
       <div
@@ -30,7 +30,7 @@ export default function Hero() {
         className="pointer-events-none absolute inset-0 opacity-[0.05]"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(29,23,18,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(29,23,18,0.5) 1px, transparent 1px)",
+            "linear-gradient(var(--color-paper) 1px, transparent 1px), linear-gradient(90deg, var(--color-paper) 1px, transparent 1px)",
           backgroundSize: "64px 64px",
         }}
         aria-hidden

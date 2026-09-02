@@ -48,7 +48,9 @@ export default function Nav() {
 
       <header
         className={`fixed top-0 left-0 right-0 z-[65] flex items-center justify-between px-6 md:px-10 transition-all duration-500 ${
-          scrolled ? "h-16 bg-ink/80 backdrop-blur-md border-b border-ink-line" : "h-20 bg-transparent"
+          scrolled
+            ? "h-16 bg-ink/80 backdrop-blur-md border-b border-ink-line"
+            : "theme-inverted h-20 bg-transparent"
         }`}
       >
         <a
@@ -114,7 +116,7 @@ export default function Nav() {
             animate={{ clipPath: "circle(150% at 100% 0%)" }}
             exit={{ clipPath: "circle(0% at 100% 0%)" }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed inset-0 z-[60] flex flex-col justify-center gap-2 bg-ink px-8 md:hidden"
+            className="theme-inverted fixed inset-0 z-[60] flex flex-col justify-center gap-2 bg-ink px-8 md:hidden"
           >
             {LINKS.map((link, i) => (
               <motion.a

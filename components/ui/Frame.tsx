@@ -12,6 +12,7 @@ type FrameProps = {
   imgClassName?: string;
   priority?: boolean;
   sizes?: string;
+  fit?: "cover" | "contain";
 };
 
 /**
@@ -28,6 +29,7 @@ export default function Frame({
   imgClassName = "",
   priority = false,
   sizes = "(max-width: 768px) 100vw, 50vw",
+  fit = "cover",
 }: FrameProps) {
   const [failed, setFailed] = useState(false);
 
@@ -40,7 +42,7 @@ export default function Frame({
           className="pointer-events-none absolute inset-0 opacity-[0.35]"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(135deg, transparent, transparent 10px, rgba(29,23,18,0.06) 10px, rgba(29,23,18,0.06) 11px)",
+              "repeating-linear-gradient(135deg, transparent, transparent 10px, color-mix(in srgb, var(--color-paper) 6%, transparent) 10px, color-mix(in srgb, var(--color-paper) 6%, transparent) 11px)",
           }}
         />
         <div className="relative flex items-start justify-between font-mono text-[10px] uppercase tracking-[0.18em] text-paper-dim">
@@ -75,7 +77,7 @@ export default function Frame({
         fill
         priority={priority}
         sizes={sizes}
-        className={`object-cover ${imgClassName}`}
+        className={`${fit === "contain" ? "object-contain" : "object-cover"} ${imgClassName}`}
         onError={() => setFailed(true)}
       />
     </div>

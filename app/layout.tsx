@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter, Space_Mono } from "next/font/google";
+import { Playfair_Display, Inter, Space_Mono } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 import CustomCursor from "@/components/layout/CustomCursor";
@@ -8,10 +8,10 @@ import Nav from "@/components/layout/Nav";
 import Footer from "@/components/layout/Footer";
 import { profile } from "@/lib/data";
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+const displaySerif = Playfair_Display({
+  variable: "--font-display-serif",
   subsets: ["latin"],
-  axes: ["opsz", "SOFT", "WONK"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
@@ -88,7 +88,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${inter.variable} ${spaceMono.variable} h-full`}
+      className={`${displaySerif.variable} ${inter.variable} ${spaceMono.variable} h-full`}
     >
       <body className="min-h-full bg-ink text-paper antialiased">
         <script

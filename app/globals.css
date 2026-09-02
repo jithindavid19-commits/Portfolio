@@ -1,17 +1,32 @@
 @import "tailwindcss";
 
-/* Warm cream editorial theme (Daniel James reference). Token names are
- * kept as-is for minimal churn across components — "ink" now means the
- * light background surface and "paper" means the dark foreground/text,
- * i.e. the roles are inverted from a literal reading of the names. */
+/* Warm cream-and-brown editorial theme (Daniel James reference, deepened
+ * with richer tan/mocha tones). Token names are kept as-is for minimal
+ * churn across components — "ink" means the background surface and
+ * "paper" means the foreground/text, i.e. the roles read inverted from
+ * a literal reading of the names in this light build of the theme. */
 :root {
-  --color-ink: #f1eae0;
-  --color-ink-raised: #e8dfcd;
-  --color-ink-line: #d9cebb;
-  --color-paper: #1d1712;
-  --color-paper-dim: #6e655a;
+  --color-ink: #ecdec3;
+  --color-ink-raised: #e0cca0;
+  --color-ink-line: #c7ac7c;
+  --color-paper: #21190f;
+  --color-paper-dim: #5c4f3c;
   --color-accent: #a83c24;
   --color-accent-dim: #7a2c1a;
+}
+
+/* Dark espresso-brown counterpart, used on select sections (Hero, Music,
+ * Contact) for tonal rhythm against the cream sections — same token
+ * names, roles flipped back so every existing bg-ink/text-paper/etc.
+ * class re-themes automatically within this scope. */
+.theme-inverted {
+  --color-ink: #211711;
+  --color-ink-raised: #2d211a;
+  --color-ink-line: #4a3928;
+  --color-paper: #f3e9d6;
+  --color-paper-dim: #b6a68c;
+  --color-accent: #c2452b;
+  --color-accent-dim: #e0846b;
 }
 
 @theme inline {
@@ -23,7 +38,7 @@
   --color-accent: var(--color-accent);
   --color-accent-dim: var(--color-accent-dim);
 
-  --font-display: var(--font-fraunces);
+  --font-display: var(--font-display-serif);
   --font-sans: var(--font-inter);
   --font-mono: var(--font-space-mono);
 

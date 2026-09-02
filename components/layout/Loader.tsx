@@ -26,7 +26,7 @@ export default function Loader() {
     <AnimatePresence>
       {visible && (
         <motion.div
-          className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-ink"
+          className="theme-inverted fixed inset-0 z-[100] flex flex-col items-center justify-center bg-ink"
           exit={{ clipPath: "inset(0% 0% 100% 0%)" }}
           transition={{ duration: 0.7, ease: [0.76, 0, 0.24, 1] }}
         >

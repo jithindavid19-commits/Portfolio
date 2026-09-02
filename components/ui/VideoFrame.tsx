@@ -30,8 +30,7 @@ export default function VideoFrame({ src, poster, label, className = "" }: Video
 
   if (failed) {
     // No video yet — if a real poster photo exists, show that instead of a
-    // generic "awaiting asset" plate, with a small badge noting the video
-    // is still on its way.
+    // generic "awaiting asset" plate.
     if (poster && !posterFailed) {
       return (
         <div className={`relative overflow-hidden bg-ink-raised ${className}`}>
@@ -44,13 +43,6 @@ export default function VideoFrame({ src, poster, label, className = "" }: Video
             onError={() => setPosterFailed(true)}
           />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent" />
-          <span className="absolute bottom-4 left-4 inline-flex items-center gap-2 border border-paper/30 bg-ink/70 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-paper backdrop-blur-sm">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" className="text-accent">
-              <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5" />
-              <path d="M10 8.5v7l6-3.5-6-3.5Z" fill="currentColor" />
-            </svg>
-            Video coming soon
-          </span>
         </div>
       );
     }
@@ -63,7 +55,7 @@ export default function VideoFrame({ src, poster, label, className = "" }: Video
           className="pointer-events-none absolute inset-0 opacity-[0.35]"
           style={{
             backgroundImage:
-              "repeating-linear-gradient(135deg, transparent, transparent 10px, rgba(29,23,18,0.06) 10px, rgba(29,23,18,0.06) 11px)",
+              "repeating-linear-gradient(135deg, transparent, transparent 10px, color-mix(in srgb, var(--color-paper) 6%, transparent) 10px, color-mix(in srgb, var(--color-paper) 6%, transparent) 11px)",
           }}
         />
         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" className="relative text-accent">

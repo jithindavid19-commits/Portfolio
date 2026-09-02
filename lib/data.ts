@@ -8,7 +8,7 @@ export const profile = {
   location: "Wembley Park, London, HA9 0TT",
   email: "jithindavid.19@gmail.com",
   phone: "+44 7721 960626",
-  instagram: { handle: "@llfreq", url: "https://instagram.com/llfreq" },
+  instagram: { handle: "@1111freq", url: "https://instagram.com/1111freq" },
   linkedin: {
     label: "linkedin.com/in/jithin-george-jj1999",
     url: "https://www.linkedin.com/in/jithin-george-jj1999",

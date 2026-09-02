@@ -26,7 +26,8 @@ export default function InstagramInsights() {
               alt={d.reelGrid.label}
               label={d.reelGrid.label}
               index="01"
-              className="aspect-[4/5] w-full"
+              className="aspect-[977/2000] w-full"
+              fit="contain"
             />
           </Reveal>
 

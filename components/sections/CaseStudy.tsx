@@ -95,7 +95,7 @@ export default function CaseStudy() {
                       aria-expanded={isOpen}
                     >
                       <span className="flex items-center gap-5">
-                        <span className={`font-mono text-xs transition-colors ${isOpen ? "text-accent" : "text-paper-dim"}`}>
+                        <span className={`w-8 shrink-0 font-mono text-xs transition-colors ${isOpen ? "text-accent" : "text-paper-dim"}`}>
                           {String(i + 1).padStart(2, "0")}
                         </span>
                         <span className="font-display text-xl text-paper md:text-2xl">
@@ -124,7 +124,7 @@ export default function CaseStudy() {
                             initial={{ y: -8 }}
                             animate={{ y: 0 }}
                             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-                            className="max-w-3xl border-l-2 border-accent/40 pb-7 pl-5 text-[15px] leading-relaxed text-paper-dim md:pl-10 md:text-base"
+                            className="max-w-3xl border-l-2 border-accent/40 pb-7 pl-5 text-[15px] leading-relaxed text-paper-dim md:pl-[3.25rem] md:text-base"
                           >
                             {stage.text}
                           </motion.p>
