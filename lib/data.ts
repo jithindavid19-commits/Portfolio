@@ -223,14 +223,50 @@ export const socialProof = {
   eyebrow: "Proof of Work",
   title: "Social & Content",
   description:
-    "A running feed of the content, campaigns and analytics behind the numbers — Instagram grids, account insights and the creative that went with them.",
+    "A running feed of the content and campaigns behind the numbers — Instagram grids and the creative that went with them.",
   assets: [
     { label: "Instagram profile & grid", path: "/assets/social/profile-grid.jpg" },
     { label: "Content grid", path: "/assets/social/content-grid.jpg" },
-    { label: "Account insights — overview", path: "/assets/social/insights-overview.jpg" },
-    { label: "Follower growth over time", path: "/assets/social/insights-growth.jpg" },
-    { label: "Audience — gender & age range", path: "/assets/social/insights-audience.jpg" },
-    { label: "Content performance — 30 days", path: "/assets/social/insights-content.jpg" },
+  ],
+};
+
+// Real Instagram account-insights figures (30-day window unless noted),
+// sourced directly from Jithin's own analytics screenshots — nothing here
+// is estimated or invented.
+export const instagramInsights = {
+  eyebrow: "Account Insights",
+  title: "Reading the numbers",
+  description:
+    "Views, audience makeup and content mix from the last 30 days — the same data used to decide what to make next.",
+  period: "Last 30 days",
+  stats: [
+    { label: "Views", value: "4,723" },
+    { label: "Interactions", value: "117" },
+    { label: "Viewers", value: "753" },
+    { label: "Net followers", value: "+1" },
+  ],
+  // Illustrative trend of the 30-day views curve (relative shape, not exact
+  // per-day counts) — for the sparkline under the Views stat.
+  viewsTrend: [140, 60, 10, 160, 200, 180, 210, 700, 130, 90, 190, 60, 30, 20, 100, 60, 350, 90, 60, 470, 90, 520, 130],
+  audienceSplit: {
+    label: "Viewers",
+    a: { label: "Followers", value: 68.9 },
+    b: { label: "Non-followers", value: 31.1 },
+  },
+  genderSplit: {
+    label: "Gender",
+    a: { label: "Women", value: 56.8 },
+    b: { label: "Men", value: 43.2 },
+  },
+  ageRange: [
+    { label: "13–17", value: 0.3 },
+    { label: "18–24", value: 15.5 },
+    { label: "25–34", value: 73.6 },
+  ],
+  contentType: [
+    { label: "Stories", value: 93.3 },
+    { label: "Posts", value: 6.3 },
+    { label: "Reels", value: 0.4 },
   ],
 };
 
