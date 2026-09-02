@@ -14,8 +14,11 @@ Already in place:
 - `photography/music-01.jpg` ✅ (festival crowd + stage lighting)
 - `photography/music-02.jpg` ✅ (festival laser show)
 - `social/profile-grid.jpg` ✅ (Instagram profile grid)
+- `social/content-grid.jpg` ✅ (Instagram content grid, with view counts)
 - `music/djing-poster.jpg` ✅ (real DJ photo — Pent Houzz — shown with a
   "Video coming soon" badge until `music/djing.mp4` lands)
+- `campaigns/eleve-assignment.pdf` ✅ (full eleve × Airtel Xstream Box deck)
+- `campaigns/magnifly-assignment.pdf` ✅ (full Magnifly × Shiamak Davar deck)
 
 ## Photography — Creative section (editorial gallery)
 6 real photos are wired in (see above). To add more, drop a file at
@@ -26,20 +29,20 @@ Any orientation works — the gallery crops to fit. Highest resolution version
 you have (min. 1600px on the long edge) for a crisp full-bleed look.
 
 ## "How I Think" — take-home strategy assignments
+Both real decks are in (see above), and both PDFs download from the site.
 These are interview case studies, not executed campaigns (see `lib/data.ts`
-for the honest framing). Each just needs its PDF export:
-- `campaigns/airtel-xstream-assignment.pdf` — the full Airtel Xstream Box deck
-- `campaigns/eleve-assignment.pdf` — the full eleve deck
+for the honest framing) — eleve × Airtel Xstream Box, and Magnifly ×
+Shiamak Davar Dance Academy, complete with real creator shortlists,
+engagement rates and budget tables pulled straight from the decks.
 
 If you'd rather show slide images instead of/alongside the PDF, add entries
-like `{ type: "image", label: "...", path: "/assets/campaigns/airtel-xstream-01.jpg" }`
+like `{ type: "image", label: "...", path: "/assets/campaigns/eleve-01.jpg" }`
 to that study's `assets` array in `lib/data.ts` and drop the matching file here.
 
 ## Social / Proof of Work — Instagram grid
 Account-insights numbers are already live as native stat tiles (see
-`lib/data.ts` → `instagramInsights`), and the profile grid is in. Still
-pending:
-- `social/content-grid.jpg` — content grid screenshot
+`lib/data.ts` → `instagramInsights`), and both the profile grid and content
+grid are in. Nothing pending here.
 
 ## Music / DJing
 - `music/djing.mp4` — the DJ video, still pending. Keep it web-optimised

@@ -166,65 +166,142 @@ export type CaseStudy = {
   context: string;
   tagline: string;
   stages: { label: string; text: string }[];
-  creatorGroups?: { category: string; names: string[] }[];
+  creatorGroups?: {
+    category: string;
+    total?: number;
+    entries: { name: string; metric?: string }[];
+  }[];
+  costTable?: { columns: string[]; rows: string[][] };
   assets: { type: "image" | "pdf"; label: string; path: string }[];
 };
 
-// Both of these were take-home strategy assignments submitted as part of
-// interview processes — not executed client campaigns. Framed honestly:
-// real research and real strategic thinking, no invented results.
+// Both of these are complete take-home strategy assignments submitted as
+// part of interview processes — not executed client campaigns. Framed
+// honestly throughout: every figure below (budgets, engagement rates,
+// reach, creator names) is taken directly from the real decks, nothing
+// invented.
 export const caseStudies: CaseStudy[] = [
   {
-    slug: "airtel-xstream",
-    title: "Airtel Xstream Box",
-    context: "Take-home assignment — Influencer Marketing Team Lead interview",
-    tagline: "Building a full influencer strategy from a single brief — audience, message and a real creator shortlist.",
+    slug: "eleve",
+    title: "eleve × Airtel Xstream Box",
+    context: "Take-home assignment — Influencer Marketing interview, EleveMedia",
+    tagline: "A full influencer strategy from brief to budget — audience, creators, costs and two real negotiation scenarios.",
     stages: [
       {
         label: "The Brief",
-        text: "Submitted as a take-home case study for an Influencer Marketing Team Lead interview: build an end-to-end influencer strategy for Airtel Xstream Box — audience, messaging, creator selection and estimated costs — from a single-line brief.",
+        text: "Submitted as a take-home assignment for EleveMedia: build the influencer marketing strategy for Airtel Xstream Box, end to end — audience, messaging, creator recommendations, estimated costs, and two influencer-negotiation scenarios.",
       },
       {
         label: "The Approach",
         text: "Targeted two segments — DINK couples (28–35) and mid-age couples (45+) — around the line \"Jo Dekha Bada Dekho\" (\"Experience More with Airtel Xstream\"), briefing creators to demonstrate the real entertainment pain points Xstream Box solves rather than just list its features.",
       },
       {
-        label: "Creator Selection",
-        text: "Shortlisted 15 creators across five genres matched to the two audiences — Lifestyle, Tech, Mom, Travel Couple and TV Celebrities — prioritising audience fit over raw follower count, then estimated commercials for each recommended creator.",
+        label: "Creator Selection & Budget",
+        text: "Shortlisted 15 creators across five genres matched to the two audiences — Lifestyle, Tech, Mom, Travel Couple and TV Celebrities — prioritising audience fit over raw follower count, each costed out by category with the same 1 IG Reel + 1 IG Story deliverable.",
+      },
+      {
+        label: "Negotiating with Influencers",
+        text: "Two real scenarios from the brief: talking a creator down from a ₹100,000 quote to fit an ₹85,000 budget — leading with appreciation, understanding their reasoning, and if needed pointing to their own stats and audience demographics to justify the ask — and securing a free IG story add-on from a creator who'd already given a 10% discount, by tying it to future collaboration opportunities rather than just pushing on price.",
       },
     ],
     creatorGroups: [
-      { category: "Lifestyle", names: ["Aashna Malani", "Deeksha Mishra", "Komal Pandey"] },
-      { category: "Tech", names: ["Technical Guruji", "Shlok Srivastava", "Beebom"] },
-      { category: "Mom", names: ["Ritu Rathee", "Harpreeth Suri", "Simone Khambatta"] },
-      { category: "Travel Couple", names: ["Daisy & Ankit", "Savi & Vid", "Prachi & Harsh"] },
-      { category: "TV Celebrities", names: ["Karan Wahi", "Jay Bhanushali", "Bharti Singh"] },
+      {
+        category: "Lifestyle",
+        entries: [{ name: "Aashna Malani" }, { name: "Deeksha Mishra" }, { name: "Komal Pandey" }],
+      },
+      {
+        category: "Tech",
+        entries: [{ name: "Technical Guruji" }, { name: "Shlok Srivastava" }, { name: "Beebom" }],
+      },
+      {
+        category: "Mom",
+        entries: [{ name: "Ritu Rathee" }, { name: "Harpreeth Suri" }, { name: "Simone Khambatta" }],
+      },
+      {
+        category: "Travel Couple",
+        entries: [{ name: "Daisy & Ankit" }, { name: "Savi & Vid" }, { name: "Prachi & Harsh" }],
+      },
+      {
+        category: "TV Celebrities",
+        entries: [{ name: "Karan Wahi" }, { name: "Jay Bhanushali" }, { name: "Bharti Singh" }],
+      },
     ],
+    costTable: {
+      columns: ["Category", "Estimated Cost", "Deliverables"],
+      rows: [
+        ["Lifestyle", "₹8,00,000", "1 IG Reel + 1 IG Story"],
+        ["Tech", "₹12,00,000", "1 IG Reel + 1 IG Story"],
+        ["Mom", "₹4,50,000", "1 IG Reel + 1 IG Story"],
+        ["Travel Couple", "₹5,00,000", "1 IG Reel + 1 IG Story"],
+        ["TV Celebs", "₹9,00,000", "1 IG Reel + 1 IG Story"],
+      ],
+    },
     assets: [
-      { type: "pdf", label: "Full assignment PDF", path: "/assets/campaigns/airtel-xstream-assignment.pdf" },
+      { type: "pdf", label: "Full assignment PDF", path: "/assets/campaigns/eleve-assignment.pdf" },
     ],
   },
   {
-    slug: "eleve",
-    title: "eleve",
-    context: "Take-home assignment — Influencer Marketing interview",
-    tagline: "A framework for how to think about influencer selection — not just who to pick, but why.",
+    slug: "magnifly",
+    title: "Magnifly × Shiamak Davar Dance Academy",
+    context: "Take-home assignment — Influencer Marketing interview, Magnifly Media",
+    tagline: "Tiering 63 shortlisted creators against real engagement rates and reach targets, not just follower counts.",
     stages: [
       {
         label: "The Brief",
-        text: "Submitted as part of an interview process for eleve, alongside strategy decks for three brand scenarios — Pillsbury Pancake Mix, BBLUNT #BoycottBoycut and CIPLA Breathefree — answering: what parameters, qualitative and quantitative, do you use to shortlist influencers, and why does each matter?",
+        text: "Submitted as a take-home assignment for Magnifly Media: build a Gen Z-focused influencer campaign for Shiamak Davar Dance Academy, one of India's best-known dance institutions, to drive visibility and enrolment.",
       },
       {
-        label: "Qualitative Parameters",
-        text: "Relevance — how closely a creator's content aligns with the brand's values and message. Authenticity — the genuineness of their connection with followers, which is what makes a collaboration land. Platform suitability — choosing creators active where the target audience actually is.",
+        label: "The Approach",
+        text: "Targeted Gen Z audiences across India with content built around the vibrant, emotional essence of dance rather than a straight sales pitch — matched to Gen Z's expectation of authenticity and creativity. Deliverable per creator: 1 IG Reel + 1 IG Story.",
       },
       {
-        label: "Quantitative Parameters",
-        text: "Reach — audience size and potential exposure. Engagement — how well a creator captivates and connects with their followers. Demographics — alignment between a creator's audience and the brand's target market. Previous campaigns — a track record that signals reliability and fit.",
+        label: "Tiering & Selection",
+        text: "Segmented 63 shortlisted creators into three tiers by role, not just size — Top Tier (13 creators, incl. Hrithik Roshan at 5.56% ER, Shraddha Kapoor at 8.96% ER, Varun Dhawan at 4.75% ER) for initial reach and awareness, Mid Tier (20 creators, incl. Dharmesh, Shruti Sinha, Aadil Khan) for driving conversation and traffic, and Micro-influencers (30 creators, incl. Sanket Panchal, Dherya Kandari, Sagar Bora) for building trust that converts to sign-ups.",
+      },
+      {
+        label: "Visibility Strategy & KPIs",
+        text: "Backed the campaign with a dedicated landing page on the Shiamak Davar website and integrated offline materials (brochures, posters, banners) at dance studios, targeting 50M+ combined reach — measured against reach, engagement (likes, shares, comments, video views) and leads (free-trial sign-ups) as the three core KPIs.",
       },
     ],
+    creatorGroups: [
+      {
+        category: "Top Tier",
+        total: 13,
+        entries: [
+          { name: "Hrithik Roshan", metric: "ER 5.56%" },
+          { name: "Shraddha Kapoor", metric: "ER 8.96%" },
+          { name: "Varun Dhawan", metric: "ER 4.75%" },
+        ],
+      },
+      {
+        category: "Mid Tier",
+        total: 20,
+        entries: [
+          { name: "Dharmesh", metric: "ER 3.21%" },
+          { name: "Shruti Sinha", metric: "ER 5.43%" },
+          { name: "Aadil Khan", metric: "ER 9.21%" },
+        ],
+      },
+      {
+        category: "Micro-Influencers",
+        total: 30,
+        entries: [
+          { name: "Sanket Panchal", metric: "ER 5.87%" },
+          { name: "Dherya Kandari", metric: "ER 6.52%" },
+          { name: "Sagar Bora", metric: "ER 6.11%" },
+        ],
+      },
+    ],
+    costTable: {
+      columns: ["Tier", "Estimated Cost", "Creators", "Total Reach"],
+      rows: [
+        ["Top Tier", "₹95,00,000", "13", "24M+"],
+        ["Mid Tier", "₹40,00,000", "20", "16M+"],
+        ["Micro", "₹15,00,000", "30", "10M+"],
+      ],
+    },
     assets: [
-      { type: "pdf", label: "Full assignment PDF", path: "/assets/campaigns/eleve-assignment.pdf" },
+      { type: "pdf", label: "Full assignment PDF", path: "/assets/campaigns/magnifly-assignment.pdf" },
     ],
   },
 ];

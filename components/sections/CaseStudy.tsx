@@ -48,7 +48,7 @@ export default function CaseStudy() {
                 }`}
                 data-cursor="magnetic"
               >
-                {String(i + 1).padStart(2, "0")} — {c.title}
+                {String(i + 1).padStart(2, "0")} — {c.title.split(" × ")[0]}
               </button>
             ))}
           </div>
@@ -119,17 +119,70 @@ export default function CaseStudy() {
                     <div key={group.category}>
                       <p className="mb-3 font-mono text-[10px] uppercase tracking-[0.14em] text-accent">
                         {group.category}
+                        {group.total ? ` · ${group.total}` : ""}
                       </p>
                       <ul className="space-y-1.5">
-                        {group.names.map((name) => (
-                          <li key={name} className="text-sm text-paper">
-                            {name}
+                        {group.entries.map((entry) => (
+                          <li key={entry.name} className="text-sm text-paper">
+                            {entry.name}
+                            {entry.metric && (
+                              <span className="ml-1.5 text-paper-dim">{entry.metric}</span>
+                            )}
                           </li>
                         ))}
+                        {group.total && group.total > group.entries.length && (
+                          <li className="text-sm text-paper-dim">
+                            +{group.total - group.entries.length} more
+                          </li>
+                        )}
                       </ul>
                     </div>
                   ))}
                 </div>
+              </Reveal>
+            )}
+
+            {study.costTable && (
+              <Reveal className="mt-12">
+                <h3 className="mb-6 font-mono text-[11px] uppercase tracking-[0.2em] text-paper-dim">
+                  Estimated Commercials
+                </h3>
+                <div className="overflow-x-auto border border-ink-line">
+                  <table className="w-full min-w-[480px] border-collapse text-left">
+                    <thead>
+                      <tr className="border-b border-ink-line">
+                        {study.costTable.columns.map((col) => (
+                          <th
+                            key={col}
+                            className="px-4 py-3 font-mono text-[10px] font-normal uppercase tracking-[0.14em] text-paper-dim"
+                          >
+                            {col}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {study.costTable.rows.map((row, i) => (
+                        <tr
+                          key={row[0]}
+                          className={i < study.costTable!.rows.length - 1 ? "border-b border-ink-line" : ""}
+                        >
+                          {row.map((cell, j) => (
+                            <td
+                              key={j}
+                              className={`px-4 py-3 text-sm ${j === 0 ? "text-paper" : "text-paper-dim"}`}
+                            >
+                              {cell}
+                            </td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.12em] text-paper-dim">
+                  Estimated costs from the assignment — real availability and final costs would follow shortlisting.
+                </p>
               </Reveal>
             )}
 
