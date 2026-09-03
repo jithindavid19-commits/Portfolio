@@ -39,6 +39,7 @@
   --color-accent-dim: var(--color-accent-dim);
 
   --font-display: var(--font-display-serif);
+  --font-name: var(--font-name-serif);
   --font-sans: var(--font-inter);
   --font-mono: var(--font-space-mono);
 

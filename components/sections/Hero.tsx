@@ -43,12 +43,12 @@ export default function Hero() {
           transition={{ delay: 1.55, duration: 0.6 }}
           className="mb-6 font-mono text-[11px] uppercase tracking-[0.3em] text-accent"
         >
-          Marketing Executive — Influencer &amp; Content
+          Marketing Executive · Influencer &amp; Content
         </motion.p>
 
-        <h1 className="font-display leading-[0.86] tracking-tight text-paper">
+        <h1 className="font-name font-bold leading-[0.86] tracking-normal text-paper">
           {HEADLINE_LINES.map((line, li) => (
-            <span key={line} className="block overflow-hidden">
+            <span key={line} className="-mb-[0.12em] block overflow-hidden pb-[0.12em]">
               <motion.span
                 initial={{ y: "110%" }}
                 animate={{ y: "0%" }}

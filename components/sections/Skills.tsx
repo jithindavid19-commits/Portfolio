@@ -22,7 +22,7 @@ export default function Skills() {
 
         <Reveal>
           <h2 className="max-w-3xl font-display text-3xl leading-[1.15] tracking-tight text-paper md:text-5xl">
-            Strategy, analysis and creative execution — in one skill set.
+            Strategy, analysis and creative execution in one skill set.
           </h2>
         </Reveal>
 

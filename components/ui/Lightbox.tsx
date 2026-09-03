@@ -116,7 +116,7 @@ export default function Lightbox({ images, index, onClose, onNavigate }: Lightbo
           {current.label && (
             <p className="pointer-events-none absolute bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap font-mono text-[11px] uppercase tracking-[0.18em] text-paper-dim">
               {current.label}
-              {images.length > 1 ? ` — ${index! + 1}/${images.length}` : ""}
+              {images.length > 1 ? ` · ${index! + 1}/${images.length}` : ""}
             </p>
           )}
         </motion.div>

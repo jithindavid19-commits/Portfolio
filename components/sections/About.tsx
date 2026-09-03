@@ -21,7 +21,7 @@ export default function About() {
                 <Frame
                   src="/assets/photography/portrait.jpg"
                   alt="Portrait of Jithin George"
-                  label="Portrait — Jithin George"
+                  label="Portrait of Jithin George"
                   index="Portrait"
                   className="aspect-[4/5] w-full"
                 />
@@ -57,7 +57,8 @@ export default function About() {
                       <li key={e.degree}>
                         <p className="font-display text-lg text-paper">{e.degree}</p>
                         <p className="text-sm text-paper-dim">
-                          {e.institution} — {e.period}
+                          {e.institution}
+                          <span className="ml-2 text-paper-dim/70">{e.period}</span>
                         </p>
                         {e.detail && (
                           <p className="mt-1.5 text-sm leading-relaxed text-paper-dim/80">{e.detail}</p>

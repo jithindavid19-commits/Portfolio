@@ -45,7 +45,7 @@ export default function InstagramInsights() {
             <div className="mt-6 border border-ink-line p-5">
               <div className="mb-3 flex items-center justify-between">
                 <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-paper-dim">
-                  Views — {d.period}
+                  Views · {d.period}
                 </p>
               </div>
               <Sparkline data={d.viewsTrend} className="h-14 w-full" />

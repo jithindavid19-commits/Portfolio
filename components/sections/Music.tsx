@@ -33,7 +33,7 @@ export default function Music() {
               <VideoFrame
                 src={music.video}
                 poster={music.poster}
-                label="DJ set — video"
+                label="DJ set video"
                 className="aspect-video w-full"
               />
             </Reveal>

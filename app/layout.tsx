@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter, Space_Mono } from "next/font/google";
+import { Playfair_Display, Cormorant_Garamond, Inter, Space_Mono } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 import CustomCursor from "@/components/layout/CustomCursor";
@@ -12,6 +12,17 @@ const displaySerif = Playfair_Display({
   variable: "--font-display-serif",
   subsets: ["latin"],
   style: ["normal", "italic"],
+  display: "swap",
+});
+
+// Used only for Jithin's name in the hero headline — Playfair Display's
+// capital J renders as a plain vertical stroke at this weight/size and
+// reads as an "I" next to the following "I" in "JITHIN"; Cormorant
+// Garamond's J keeps its traditional hook below the baseline.
+const displayName = Cormorant_Garamond({
+  variable: "--font-name-serif",
+  subsets: ["latin"],
+  weight: ["600", "700"],
   display: "swap",
 });
 
@@ -32,9 +43,9 @@ const siteUrl = "https://jithingeorge.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Jithin George — Digital & Influencer Marketing",
+  title: "Jithin George | Digital & Influencer Marketing",
   description:
-    "Jithin George — Marketing Executive specialising in influencer marketing, social media and content strategy. MSc Digital Marketing, real campaign experience, visual storytelling.",
+    "Jithin George, Marketing Executive specialising in influencer marketing, social media and content strategy. MSc Digital Marketing, real campaign experience, visual storytelling.",
   keywords: [
     "Jithin George",
     "Digital Marketing",
@@ -47,7 +58,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Jithin George" }],
   openGraph: {
-    title: "Jithin George — Digital & Influencer Marketing",
+    title: "Jithin George | Digital & Influencer Marketing",
     description:
       "Marketing Executive specialising in influencer marketing, social media and content strategy.",
     url: siteUrl,
@@ -56,7 +67,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jithin George — Digital & Influencer Marketing",
+    title: "Jithin George | Digital & Influencer Marketing",
     description:
       "Marketing Executive specialising in influencer marketing, social media and content strategy.",
   },
@@ -88,7 +99,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${displaySerif.variable} ${inter.variable} ${spaceMono.variable} h-full`}
+      className={`${displaySerif.variable} ${displayName.variable} ${inter.variable} ${spaceMono.variable} h-full`}
     >
       <body className="min-h-full bg-ink text-paper antialiased">
         <script

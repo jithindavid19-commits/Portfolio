@@ -68,7 +68,7 @@ export default function CaseStudy() {
                   />
                 )}
                 <span className="relative">
-                  {String(i + 1).padStart(2, "0")} — {c.title.split(" × ")[0]}
+                  {String(i + 1).padStart(2, "0")} · {c.title.split(" × ")[0]}
                 </span>
               </motion.button>
             ))}
@@ -208,7 +208,7 @@ export default function CaseStudy() {
                   </table>
                 </div>
                 <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.12em] text-paper-dim">
-                  Estimated costs from the assignment — real availability and final costs would follow shortlisting.
+                  Estimated costs from the assignment. Real availability and final costs would follow shortlisting.
                 </p>
               </Reveal>
             )}
@@ -237,7 +237,7 @@ export default function CaseStudy() {
                       <Frame
                         key={asset.path}
                         src={asset.path}
-                        alt={`${study.title} — ${asset.label}`}
+                        alt={`${study.title}: ${asset.label}`}
                         label={asset.label}
                         index={String(i + 1).padStart(2, "0")}
                         className="aspect-[4/3] w-[280px] shrink-0 md:w-[340px]"

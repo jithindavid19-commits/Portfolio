@@ -19,10 +19,10 @@ export const profile = {
 export const about = {
   eyebrow: "Who I Am",
   summary:
-    "Marketing specialist with hands-on experience in influencer marketing and social media campaigns — coordinating with creators, managing campaign deliverables, and analysing engagement metrics to support brand objectives.",
+    "Marketing specialist with hands-on experience in influencer marketing and social media campaigns, coordinating with creators, managing campaign deliverables, and analysing engagement metrics to support brand objectives.",
   paragraphs: [
-    "I build campaigns around people — the creators who make them and the audiences who trust them. My work sits at the intersection of strategy and culture: research the right partners, manage the relationship properly, and read the numbers honestly enough to know what actually worked.",
-    "Outside campaign decks, I shoot, edit and DJ. That's not a side note — it's where the instinct for pacing, visual storytelling and what stops a scroll actually comes from. Marketing that understands culture reads differently to marketing that studies it from the outside.",
+    "I build campaigns around people: the creators who make them and the audiences who trust them. My work sits at the intersection of strategy and culture: research the right partners, manage the relationship properly, and read the numbers honestly enough to know what actually worked.",
+    "Outside campaign decks, I shoot, edit and DJ. That's not a side note; it's where the instinct for pacing, visual storytelling and what stops a scroll actually comes from. Marketing that understands culture reads differently to marketing that studies it from the outside.",
     "I'm currently based in London, targeting Digital Marketing, Influencer Marketing, Social Media and Content Marketing roles across the UK.",
   ],
 };
@@ -33,7 +33,7 @@ export const education = [
     institution: "University of Salford",
     period: "2024 – 2025",
     detail:
-      "Dissertation: \"The Impact of Modern Influencer Strategies on Consumer Behaviour\" — Distinction, 71.33%. Focus areas: media studies, advertising, public relations, content creation, communication theory.",
+      "Dissertation: \"The Impact of Modern Influencer Strategies on Consumer Behaviour\" (Distinction, 71.33%). Focus areas: media studies, advertising, public relations, content creation, communication theory.",
   },
   {
     degree: "BA Mass Media & Communication",
@@ -145,24 +145,24 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "eleve",
     title: "eleve × Airtel Xstream Box",
-    context: "Take-home assignment — Influencer Marketing interview, EleveMedia",
-    tagline: "A full influencer strategy from brief to budget — audience, creators, costs and two real negotiation scenarios.",
+    context: "Take-home assignment for an Influencer Marketing interview at EleveMedia",
+    tagline: "A full influencer strategy from brief to budget: audience, creators, costs and two real negotiation scenarios.",
     stages: [
       {
         label: "The Brief",
-        text: "Submitted as a take-home assignment for EleveMedia: build the influencer marketing strategy for Airtel Xstream Box, end to end — audience, messaging, creator recommendations, estimated costs, and two influencer-negotiation scenarios.",
+        text: "Submitted as a take-home assignment for EleveMedia: build the influencer marketing strategy for Airtel Xstream Box end to end, covering audience, messaging, creator recommendations, estimated costs, and two influencer-negotiation scenarios.",
       },
       {
         label: "The Approach",
-        text: "Targeted two segments — DINK couples (28–35) and mid-age couples (45+) — around the line \"Jo Dekha Bada Dekho\" (\"Experience More with Airtel Xstream\"), briefing creators to demonstrate the real entertainment pain points Xstream Box solves rather than just list its features.",
+        text: "Targeted two segments, DINK couples (28–35) and mid-age couples (45+), around the line \"Jo Dekha Bada Dekho\" (\"Experience More with Airtel Xstream\"), briefing creators to demonstrate the real entertainment pain points Xstream Box solves rather than just list its features.",
       },
       {
         label: "Creator Selection & Budget",
-        text: "Shortlisted 15 creators across five genres matched to the two audiences — Lifestyle, Tech, Mom, Travel Couple and TV Celebrities — prioritising audience fit over raw follower count, each costed out by category with the same 1 IG Reel + 1 IG Story deliverable.",
+        text: "Shortlisted 15 creators across five genres matched to the two audiences: Lifestyle, Tech, Mom, Travel Couple and TV Celebrities, prioritising audience fit over raw follower count, each costed out by category with the same 1 IG Reel + 1 IG Story deliverable.",
       },
       {
         label: "Negotiating with Influencers",
-        text: "Two real scenarios from the brief: talking a creator down from a ₹100,000 quote to fit an ₹85,000 budget — leading with appreciation, understanding their reasoning, and if needed pointing to their own stats and audience demographics to justify the ask — and securing a free IG story add-on from a creator who'd already given a 10% discount, by tying it to future collaboration opportunities rather than just pushing on price.",
+        text: "Two real scenarios from the brief: talking a creator down from a ₹100,000 quote to fit an ₹85,000 budget by leading with appreciation, understanding their reasoning, and if needed pointing to their own stats and audience demographics to justify the ask, and securing a free IG story add-on from a creator who'd already given a 10% discount, by tying it to future collaboration opportunities rather than just pushing on price.",
       },
     ],
     creatorGroups: [
@@ -204,7 +204,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "magnifly",
     title: "Magnifly × Shiamak Davar Dance Academy",
-    context: "Take-home assignment — Influencer Marketing interview, Magnifly Media",
+    context: "Take-home assignment for an Influencer Marketing interview at Magnifly Media",
     tagline: "Tiering 63 shortlisted creators against real engagement rates and reach targets, not just follower counts.",
     stages: [
       {
@@ -213,15 +213,15 @@ export const caseStudies: CaseStudy[] = [
       },
       {
         label: "The Approach",
-        text: "Targeted Gen Z audiences across India with content built around the vibrant, emotional essence of dance rather than a straight sales pitch — matched to Gen Z's expectation of authenticity and creativity. Deliverable per creator: 1 IG Reel + 1 IG Story.",
+        text: "Targeted Gen Z audiences across India with content built around the vibrant, emotional essence of dance rather than a straight sales pitch, matching Gen Z's expectation of authenticity and creativity. Deliverable per creator: 1 IG Reel + 1 IG Story.",
       },
       {
         label: "Tiering & Selection",
-        text: "Segmented 63 shortlisted creators into three tiers by role, not just size — Top Tier (13 creators, incl. Hrithik Roshan at 5.56% ER, Shraddha Kapoor at 8.96% ER, Varun Dhawan at 4.75% ER) for initial reach and awareness, Mid Tier (20 creators, incl. Dharmesh, Shruti Sinha, Aadil Khan) for driving conversation and traffic, and Micro-influencers (30 creators, incl. Sanket Panchal, Dherya Kandari, Sagar Bora) for building trust that converts to sign-ups.",
+        text: "Segmented 63 shortlisted creators into three tiers by role, not just size: Top Tier (13 creators, incl. Hrithik Roshan at 5.56% ER, Shraddha Kapoor at 8.96% ER, Varun Dhawan at 4.75% ER) for initial reach and awareness, Mid Tier (20 creators, incl. Dharmesh, Shruti Sinha, Aadil Khan) for driving conversation and traffic, and Micro-influencers (30 creators, incl. Sanket Panchal, Dherya Kandari, Sagar Bora) for building trust that converts to sign-ups.",
       },
       {
         label: "Visibility Strategy & KPIs",
-        text: "Backed the campaign with a dedicated landing page on the Shiamak Davar website and integrated offline materials (brochures, posters, banners) at dance studios, targeting 50M+ combined reach — measured against reach, engagement (likes, shares, comments, video views) and leads (free-trial sign-ups) as the three core KPIs.",
+        text: "Backed the campaign with a dedicated landing page on the Shiamak Davar website and integrated offline materials (brochures, posters, banners) at dance studios, targeting 50M+ combined reach, measured against reach, engagement (likes, shares, comments, video views) and leads (free-trial sign-ups) as the three core KPIs.",
       },
     ],
     creatorGroups: [
@@ -274,7 +274,7 @@ export const instagramInsights = {
   eyebrow: "Proof of Work",
   title: "Reading the numbers",
   description:
-    "Views, audience makeup and content mix from the last 30 days — the same data used to decide what to make next.",
+    "Views, audience makeup and content mix from the last 30 days: the same data used to decide what to make next.",
   period: "Last 30 days",
   reelGrid: { label: "Reel & content grid", path: "/assets/social/content-grid.jpg" },
   stats: [
@@ -312,7 +312,7 @@ export const photography = {
   eyebrow: "My Creative World",
   title: "Visual Storytelling",
   description:
-    "Photography is where the eye for pacing, composition and what actually stops a scroll gets built. Travel, music, city, nature — the same instincts that shape a campaign.",
+    "Photography is where the eye for pacing, composition and what actually stops a scroll gets built. Travel, music, city, nature: the same instincts that shape a campaign.",
   categories: [
     { key: "travel", label: "Travel", path: "/assets/photography/travel-01.jpg" },
     { key: "music", label: "Music", path: "/assets/photography/music-01.jpg" },
@@ -327,7 +327,7 @@ export const music = {
   eyebrow: "Music / Culture / Curation",
   title: "DJing",
   description:
-    "Music is the other half of the same instinct — reading a room, building a set, curating a moment. It's where a lot of my sense of pacing and audience actually comes from.",
+    "Music is the other half of the same instinct: reading a room, building a set, curating a moment. It's where a lot of my sense of pacing and audience actually comes from.",
   video: "/assets/music/djing.mp4",
   poster: "/assets/music/djing-poster.jpg",
 };
