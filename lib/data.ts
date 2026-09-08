@@ -19,7 +19,7 @@ export const profile = {
 export const about = {
   eyebrow: "Who I Am",
   summary:
-    "Marketing specialist with hands-on experience in influencer marketing and social media campaigns, coordinating with creators, managing campaign deliverables, and analysing engagement metrics to support brand objectives.",
+    "Marketing specialist with practical experience in influencer marketing and social media campaigns, coordinating with creators, managing campaign deliverables, and analysing engagement metrics to support brand objectives.",
   paragraphs: [
     "I build campaigns around people: the creators who make them and the audiences who trust them. My work sits at the intersection of strategy and culture: research the right partners, manage the relationship properly, and read the numbers honestly enough to know what actually worked.",
     "Outside campaign decks, I shoot, edit and DJ. That's not a side note; it's where the instinct for pacing, visual storytelling and what stops a scroll actually comes from. Marketing that understands culture reads differently to marketing that studies it from the outside.",
@@ -76,7 +76,7 @@ export const skills = {
         "Google Analytics 4",
         "Social Media Analytics",
         "SEO Fundamentals & Keyword Research",
-        "Data-Driven Marketing",
+        "Data Driven Marketing",
         "Search Engine Marketing",
       ],
     },
@@ -145,16 +145,16 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "eleve",
     title: "eleve × Airtel Xstream Box",
-    context: "Take-home assignment for an Influencer Marketing interview at EleveMedia",
+    context: "Take home assignment for an Influencer Marketing interview at EleveMedia",
     tagline: "A full influencer strategy from brief to budget: audience, creators, costs and two real negotiation scenarios.",
     stages: [
       {
         label: "The Brief",
-        text: "Submitted as a take-home assignment for EleveMedia: build the influencer marketing strategy for Airtel Xstream Box end to end, covering audience, messaging, creator recommendations, estimated costs, and two influencer-negotiation scenarios.",
+        text: "Submitted as a take home assignment for EleveMedia: build the influencer marketing strategy for Airtel Xstream Box end to end, covering audience, messaging, creator recommendations, estimated costs, and two influencer negotiation scenarios.",
       },
       {
         label: "The Approach",
-        text: "Targeted two segments, DINK couples (28–35) and mid-age couples (45+), around the line \"Jo Dekha Bada Dekho\" (\"Experience More with Airtel Xstream\"), briefing creators to demonstrate the real entertainment pain points Xstream Box solves rather than just list its features.",
+        text: "Targeted two segments, DINK couples (28–35) and mid age couples (45+), around the line \"Jo Dekha Bada Dekho\" (\"Experience More with Airtel Xstream\"), briefing creators to demonstrate the real entertainment pain points Xstream Box solves rather than just list its features.",
       },
       {
         label: "Creator Selection & Budget",
@@ -204,12 +204,12 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "magnifly",
     title: "Magnifly × Shiamak Davar Dance Academy",
-    context: "Take-home assignment for an Influencer Marketing interview at Magnifly Media",
+    context: "Take home assignment for an Influencer Marketing interview at Magnifly Media",
     tagline: "Tiering 63 shortlisted creators against real engagement rates and reach targets, not just follower counts.",
     stages: [
       {
         label: "The Brief",
-        text: "Submitted as a take-home assignment for Magnifly Media: build a Gen Z-focused influencer campaign for Shiamak Davar Dance Academy, one of India's best-known dance institutions, to drive visibility and enrolment.",
+        text: "Submitted as a take home assignment for Magnifly Media: build an influencer campaign focused on Gen Z audiences for Shiamak Davar Dance Academy, one of India's best known dance institutions, to drive visibility and enrolment.",
       },
       {
         label: "The Approach",
@@ -217,11 +217,11 @@ export const caseStudies: CaseStudy[] = [
       },
       {
         label: "Tiering & Selection",
-        text: "Segmented 63 shortlisted creators into three tiers by role, not just size: Top Tier (13 creators, incl. Hrithik Roshan at 5.56% ER, Shraddha Kapoor at 8.96% ER, Varun Dhawan at 4.75% ER) for initial reach and awareness, Mid Tier (20 creators, incl. Dharmesh, Shruti Sinha, Aadil Khan) for driving conversation and traffic, and Micro-influencers (30 creators, incl. Sanket Panchal, Dherya Kandari, Sagar Bora) for building trust that converts to sign-ups.",
+        text: "Segmented 63 shortlisted creators into three tiers by role, not just size: Top Tier (13 creators, incl. Hrithik Roshan at 5.56% ER, Shraddha Kapoor at 8.96% ER, Varun Dhawan at 4.75% ER) for initial reach and awareness, Mid Tier (20 creators, incl. Dharmesh, Shruti Sinha, Aadil Khan) for driving conversation and traffic, and Micro influencers (30 creators, incl. Sanket Panchal, Dherya Kandari, Sagar Bora) for building trust that converts to signups.",
       },
       {
         label: "Visibility Strategy & KPIs",
-        text: "Backed the campaign with a dedicated landing page on the Shiamak Davar website and integrated offline materials (brochures, posters, banners) at dance studios, targeting 50M+ combined reach, measured against reach, engagement (likes, shares, comments, video views) and leads (free-trial sign-ups) as the three core KPIs.",
+        text: "Backed the campaign with a dedicated landing page on the Shiamak Davar website and integrated offline materials (brochures, posters, banners) at dance studios, targeting 50M+ combined reach, measured against reach, engagement (likes, shares, comments, video views) and leads (free trial signups) as the three core KPIs.",
       },
     ],
     creatorGroups: [
@@ -244,7 +244,7 @@ export const caseStudies: CaseStudy[] = [
         ],
       },
       {
-        category: "Micro-Influencers",
+        category: "Micro Influencers",
         total: 30,
         entries: [
           { name: "Sanket Panchal", metric: "ER 5.87%" },
@@ -289,7 +289,7 @@ export const instagramInsights = {
   audienceSplit: {
     label: "Viewers",
     a: { label: "Followers", value: 68.9 },
-    b: { label: "Non-followers", value: 31.1 },
+    b: { label: "Non followers", value: 31.1 },
   },
   genderSplit: {
     label: "Gender",

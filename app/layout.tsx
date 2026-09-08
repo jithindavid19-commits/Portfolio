@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Cormorant_Garamond, Inter, Space_Mono } from "next/font/google";
+import { Playfair_Display, Bodoni_Moda, Inter, Space_Mono } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 import CustomCursor from "@/components/layout/CustomCursor";
@@ -17,12 +17,13 @@ const displaySerif = Playfair_Display({
 
 // Used only for Jithin's name in the hero headline — Playfair Display's
 // capital J renders as a plain vertical stroke at this weight/size and
-// reads as an "I" next to the following "I" in "JITHIN"; Cormorant
-// Garamond's J keeps its traditional hook below the baseline.
-const displayName = Cormorant_Garamond({
+// reads as an "I" next to the following "I" in "JITHIN". Bodoni Moda's
+// high-contrast Didone J swoops well below the baseline, so it stays
+// unmistakable even at bold weight and tight line height.
+const displayName = Bodoni_Moda({
   variable: "--font-name-serif",
   subsets: ["latin"],
-  weight: ["600", "700"],
+  weight: ["700"],
   display: "swap",
 });
 
