@@ -12,7 +12,10 @@ const TICKER_ITEMS = [
   "Creator Partnerships",
 ];
 
-const HEADLINE_LINES = ["JITHIN", "GEORGE"];
+// Rendered in mixed case rather than full caps so the lowercase "j" (with
+// its dot and descender) reads unambiguously — no serif/Didone capital J
+// design, however hooked, seemed to read as distinct from "I" at a glance.
+const HEADLINE_LINES = ["Jithin", "George"];
 
 export default function Hero() {
   return (

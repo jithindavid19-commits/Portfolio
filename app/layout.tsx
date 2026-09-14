@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Bodoni_Moda, Inter, Space_Mono } from "next/font/google";
+import { Playfair_Display, Lora, Inter, Space_Mono } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 import CustomCursor from "@/components/layout/CustomCursor";
@@ -15,15 +15,14 @@ const displaySerif = Playfair_Display({
   display: "swap",
 });
 
-// Used only for Jithin's name in the hero headline — Playfair Display's
-// capital J renders as a plain vertical stroke at this weight/size and
-// reads as an "I" next to the following "I" in "JITHIN". Bodoni Moda's
-// high-contrast Didone J swoops well below the baseline, so it stays
-// unmistakable even at bold weight and tight line height.
-const displayName = Bodoni_Moda({
+// Used only for Jithin's name in the hero headline. A different family
+// from the section-heading serif (Playfair Display), and set in mixed
+// case rather than full caps in Hero.tsx — no all-caps serif J read as
+// unambiguous, but a lowercase "j" (dot + descender) always does.
+const displayName = Lora({
   variable: "--font-name-serif",
   subsets: ["latin"],
-  weight: ["700"],
+  weight: ["600", "700"],
   display: "swap",
 });
 
