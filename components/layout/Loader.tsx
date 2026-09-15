@@ -35,7 +35,7 @@ export default function Loader() {
               initial={{ y: "100%" }}
               animate={{ y: "0%" }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
-              className="font-name font-bold text-4xl tracking-tight text-paper md:text-5xl"
+              className="font-name font-bold text-3xl tracking-tight text-paper md:text-4xl"
             >
               Jithin George
             </motion.p>

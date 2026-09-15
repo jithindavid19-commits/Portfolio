@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Lora, Inter, Space_Mono } from "next/font/google";
+import { Playfair_Display, Newsreader, Inter, Space_Mono } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 import CustomCursor from "@/components/layout/CustomCursor";
@@ -15,14 +15,17 @@ const displaySerif = Playfair_Display({
   display: "swap",
 });
 
-// Used only for Jithin's name in the hero headline. A different family
-// from the section-heading serif (Playfair Display), and set in mixed
-// case rather than full caps in Hero.tsx — no all-caps serif J read as
-// unambiguous, but a lowercase "j" (dot + descender) always does.
-const displayName = Lora({
+// Used only for Jithin's name (hero headline + loader). A different
+// family from the section-heading serif (Playfair Display), set in
+// mixed case rather than full caps — a lowercase "j" (dot + descender)
+// always reads unambiguously — and kept at a smaller size than a typical
+// hero headline so the full name sits comfortably inside the viewport
+// on every screen with no risk of edge clipping.
+const displayName = Newsreader({
   variable: "--font-name-serif",
   subsets: ["latin"],
   weight: ["600", "700"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 

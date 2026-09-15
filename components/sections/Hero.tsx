@@ -49,7 +49,7 @@ export default function Hero() {
           Marketing Executive · Influencer &amp; Content
         </motion.p>
 
-        <h1 className="font-name font-bold leading-[0.86] tracking-normal text-paper">
+        <h1 className="font-name font-bold leading-[0.92] tracking-normal text-paper">
           {HEADLINE_LINES.map((line, li) => (
             <span key={line} className="-mb-[0.12em] block overflow-hidden pb-[0.12em]">
               <motion.span
@@ -60,7 +60,7 @@ export default function Hero() {
                   delay: 1.6 + li * 0.1,
                   ease: [0.16, 1, 0.3, 1],
                 }}
-                className="block text-[16vw] sm:text-[14vw] md:text-[10vw] lg:text-[8.5rem]"
+                className="block text-[11vw] sm:text-[9vw] md:text-[6.5vw] lg:text-[5.5rem]"
               >
                 {line}
               </motion.span>
