@@ -9,15 +9,8 @@ export default function InstagramInsights() {
 
   return (
     <div className="relative overflow-hidden border-t border-ink-line bg-ink-raised py-20 md:py-28">
-      <SectionBackground
-        src="/assets/photography/music-02.jpg"
-        opacity={28}
-        className="absolute inset-x-0 top-0 h-[360px]"
-      />
-      <div
-        className="pointer-events-none absolute inset-x-0 top-0 h-[360px] bg-gradient-to-b from-ink-raised/75 via-ink-raised/85 to-ink-raised"
-        aria-hidden
-      />
+      <SectionBackground src="/assets/photography/music-02.jpg" opacity={38} />
+      <div className="pointer-events-none absolute inset-0 bg-ink-raised/50" aria-hidden />
 
       <div className="relative mx-auto max-w-7xl px-6 md:px-10">
         <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
@@ -53,7 +46,7 @@ export default function InstagramInsights() {
                 </div>
               ))}
             </div>
-            <div className="mt-6 border border-ink-line p-5">
+            <div className="mt-6 border border-ink-line bg-ink-raised p-5">
               <div className="mb-3 flex items-center justify-between">
                 <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-paper-dim">
                   Views · {d.period}
@@ -65,25 +58,25 @@ export default function InstagramInsights() {
 
           <Reveal delay={0.1} className="lg:col-span-5">
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-              <div className="border border-ink-line p-6">
+              <div className="border border-ink-line bg-ink-raised p-6">
                 <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.14em] text-paper-dim">
                   Viewer split
                 </p>
                 <SplitBar a={d.audienceSplit.a} b={d.audienceSplit.b} />
               </div>
-              <div className="border border-ink-line p-6">
+              <div className="border border-ink-line bg-ink-raised p-6">
                 <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.14em] text-paper-dim">
                   Gender
                 </p>
                 <SplitBar a={d.genderSplit.a} b={d.genderSplit.b} />
               </div>
-              <div className="border border-ink-line p-6">
+              <div className="border border-ink-line bg-ink-raised p-6">
                 <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.14em] text-paper-dim">
                   Age range
                 </p>
                 <RankedBars items={d.ageRange} maxValue={100} />
               </div>
-              <div className="border border-ink-line p-6">
+              <div className="border border-ink-line bg-ink-raised p-6">
                 <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.14em] text-paper-dim">
                   Content type
                 </p>

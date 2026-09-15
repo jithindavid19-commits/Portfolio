@@ -21,15 +21,8 @@ export default function CaseStudy() {
 
   return (
     <div id="work" className="relative overflow-hidden border-t border-ink-line bg-ink-raised py-24 md:py-36">
-      <SectionBackground
-        src="/assets/photography/nature-01.jpg"
-        opacity={30}
-        className="absolute inset-x-0 top-0 h-[520px]"
-      />
-      <div
-        className="pointer-events-none absolute inset-x-0 top-0 h-[520px] bg-gradient-to-b from-ink-raised/70 via-ink-raised/85 to-ink-raised"
-        aria-hidden
-      />
+      <SectionBackground src="/assets/photography/nature-01.jpg" opacity={40} />
+      <div className="pointer-events-none absolute inset-0 bg-ink-raised/45" aria-hidden />
 
       <div className="relative mx-auto max-w-7xl px-6 md:px-10">
         <div className="mb-10 flex flex-wrap items-center justify-between gap-6">
@@ -93,8 +86,9 @@ export default function CaseStudy() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.35 }}
+            className="mt-6 rounded-sm bg-ink-raised/90 p-6 backdrop-blur-sm md:p-10"
           >
-            <div className="mt-10 divide-y divide-ink-line border-y border-ink-line">
+            <div className="divide-y divide-ink-line border-y border-ink-line">
               {study.stages.map((stage, i) => {
                 const isOpen = openStage === i;
                 return (

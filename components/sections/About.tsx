@@ -6,8 +6,8 @@ import SectionBackground from "@/components/ui/SectionBackground";
 export default function About() {
   return (
     <section id="about" className="relative overflow-hidden border-t border-ink-line bg-ink py-24 md:py-36">
-      <SectionBackground src="/assets/photography/travel-01.jpg" opacity={22} />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink via-ink/90 to-ink/60" aria-hidden />
+      <SectionBackground src="/assets/photography/travel-01.jpg" opacity={38} />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink/85 via-ink/55 to-ink/30" aria-hidden />
 
       <div className="relative mx-auto max-w-7xl px-6 md:px-10">
         <div className="mb-14 flex items-center gap-4">

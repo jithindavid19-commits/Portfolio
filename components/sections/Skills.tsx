@@ -4,7 +4,6 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { skills } from "@/lib/data";
 import { Reveal } from "@/components/ui/Reveal";
-import SectionBackground from "@/components/ui/SectionBackground";
 
 export default function Skills() {
   const [active, setActive] = useState(0);
@@ -12,8 +11,17 @@ export default function Skills() {
 
   return (
     <section id="skills" className="relative overflow-hidden border-t border-ink-line bg-ink-raised py-24 md:py-36">
-      <SectionBackground src="/assets/photography/city-01.jpg" opacity={26} />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink-raised via-ink-raised/85 to-ink-raised" aria-hidden />
+      {/* Designed backdrop (not a photo) — this section is dense with
+          small tag text, so a crafted gradient mesh in the accent blues
+          stays clearly colorful without ever competing with a tag label. */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-35"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 15% 20%, var(--color-accent) 0%, transparent 38%), radial-gradient(circle at 85% 15%, var(--color-accent-dim) 0%, transparent 42%), radial-gradient(circle at 75% 85%, var(--color-accent) 0%, transparent 40%), radial-gradient(circle at 10% 90%, var(--color-accent-dim) 0%, transparent 45%)",
+        }}
+        aria-hidden
+      />
 
       <div className="relative mx-auto max-w-7xl px-6 md:px-10">
         <div className="mb-14 flex items-center gap-4">
@@ -72,7 +80,7 @@ export default function Skills() {
                     initial={{ opacity: 0, y: 8 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: i * 0.04, duration: 0.35 }}
-                    className="border border-ink-line px-4 py-2.5 text-sm text-paper transition-colors hover:border-accent hover:text-accent md:text-base"
+                    className="border border-ink-line bg-ink-raised px-4 py-2.5 text-sm text-paper transition-colors hover:border-accent hover:text-accent md:text-base"
                   >
                     {item}
                   </motion.span>

@@ -28,9 +28,9 @@ export default function Hero() {
     >
       {/* Background photo — a real shot from Jithin's Instagram content
           grid, tying the intro to "Influencer & Content" marketing. */}
-      <SectionBackground src="/assets/social/content-grid.jpg" opacity={30} />
+      <SectionBackground src="/assets/social/content-grid.jpg" opacity={42} />
       <div
-        className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/35"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink/80 via-ink/50 to-ink/20"
         aria-hidden
       />
 
