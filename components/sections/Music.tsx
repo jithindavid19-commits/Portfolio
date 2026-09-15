@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { music } from "@/lib/data";
 import { Reveal, RevealWords } from "@/components/ui/Reveal";
 import VideoFrame from "@/components/ui/VideoFrame";
@@ -5,7 +6,20 @@ import VideoFrame from "@/components/ui/VideoFrame";
 export default function Music() {
   return (
     <section id="music" className="theme-inverted relative border-t border-ink-line bg-ink-raised py-24 md:py-36">
-      <div className="mx-auto max-w-7xl px-6 md:px-10">
+      {/* Atmospheric backdrop — a real photo from Jithin's own set, dimmed
+          well behind the content so the copy and DJ frame stay legible. */}
+      <div className="pointer-events-none absolute inset-0 mix-blend-lighten opacity-60" aria-hidden>
+        <Image
+          src="/assets/photography/music-01.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover"
+        />
+      </div>
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink via-transparent to-ink" aria-hidden />
+
+      <div className="relative mx-auto max-w-7xl px-6 md:px-10">
         <div className="mb-14 flex items-center gap-4">
           <span className="font-mono text-xs uppercase tracking-[0.3em] text-accent">04</span>
           <span className="h-px flex-1 max-w-16 bg-ink-line" />

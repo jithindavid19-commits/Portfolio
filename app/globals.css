@@ -1,32 +1,32 @@
 @import "tailwindcss";
 
-/* Warm cream-and-brown editorial theme (Daniel James reference, deepened
- * with richer tan/mocha tones). Token names are kept as-is for minimal
- * churn across components — "ink" means the background surface and
- * "paper" means the foreground/text, i.e. the roles read inverted from
- * a literal reading of the names in this light build of the theme. */
+/* Cool ice-blue editorial theme — pairs with the navy/sky-blue accent
+ * used on the name. Token names are kept as-is for minimal churn across
+ * components — "ink" means the background surface and "paper" means the
+ * foreground/text, i.e. the roles read inverted from a literal reading
+ * of the names in this light build of the theme. */
 :root {
-  --color-ink: #ecdec3;
-  --color-ink-raised: #e0cca0;
-  --color-ink-line: #c7ac7c;
-  --color-paper: #21190f;
-  --color-paper-dim: #5c4f3c;
-  --color-accent: #a83c24;
-  --color-accent-dim: #7a2c1a;
+  --color-ink: #e7edf6;
+  --color-ink-raised: #d3e0f0;
+  --color-ink-line: #a9c1de;
+  --color-paper: #0f2138;
+  --color-paper-dim: #4d6480;
+  --color-accent: #2f6fed;
+  --color-accent-dim: #1a3f91;
 }
 
-/* Dark espresso-brown counterpart, used on select sections (Hero, Music,
- * Contact) for tonal rhythm against the cream sections — same token
- * names, roles flipped back so every existing bg-ink/text-paper/etc.
- * class re-themes automatically within this scope. */
+/* Deep navy counterpart, used on select sections (Hero, Music, Contact)
+ * for tonal rhythm against the ice-blue sections — same token names,
+ * roles flipped back so every existing bg-ink/text-paper/etc. class
+ * re-themes automatically within this scope. */
 .theme-inverted {
-  --color-ink: #211711;
-  --color-ink-raised: #2d211a;
-  --color-ink-line: #4a3928;
-  --color-paper: #f3e9d6;
-  --color-paper-dim: #b6a68c;
-  --color-accent: #c2452b;
-  --color-accent-dim: #e0846b;
+  --color-ink: #0a1830;
+  --color-ink-raised: #11253f;
+  --color-ink-line: #24406a;
+  --color-paper: #eaf1fb;
+  --color-paper-dim: #93aed0;
+  --color-accent: #4f8dfd;
+  --color-accent-dim: #a8c8ff;
 }
 
 @theme inline {

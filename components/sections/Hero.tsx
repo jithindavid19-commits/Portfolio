@@ -15,7 +15,9 @@ const TICKER_ITEMS = [
 // Rendered in mixed case rather than full caps so the lowercase "j" (with
 // its dot and descender) reads unambiguously — no serif/Didone capital J
 // design, however hooked, seemed to read as distinct from "I" at a glance.
-const HEADLINE_LINES = ["Jithin", "George"];
+// Kept on one line with a fluid clamp() size rather than split across two
+// lines, so it scales down to fit the viewport instead of wrapping.
+const HEADLINE = "Jithin George";
 
 export default function Hero() {
   return (
@@ -39,6 +41,36 @@ export default function Hero() {
         aria-hidden
       />
 
+      {/* Marketing motif — a faint analytics/trend graphic behind the
+          headline, echoing the "Proof of Work" chart language used later
+          in the page without competing with the name for attention. */}
+      <svg
+        className="pointer-events-none absolute -right-[8%] top-1/2 hidden h-[70vh] w-[60vw] -translate-y-1/2 opacity-[0.14] md:block"
+        viewBox="0 0 600 500"
+        fill="none"
+        aria-hidden
+      >
+        <g stroke="var(--color-accent)" strokeWidth="1.5">
+          <line x1="40" y1="40" x2="40" y2="440" />
+          <line x1="40" y1="440" x2="580" y2="440" />
+        </g>
+        <g fill="var(--color-accent)" opacity="0.5">
+          <rect x="90" y="340" width="46" height="100" />
+          <rect x="190" y="280" width="46" height="160" />
+          <rect x="290" y="220" width="46" height="220" />
+          <rect x="390" y="150" width="46" height="290" />
+          <rect x="490" y="90" width="46" height="350" />
+        </g>
+        <path
+          d="M90 300 L190 240 L290 190 L390 120 L490 60"
+          stroke="var(--color-paper)"
+          strokeWidth="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <circle cx="490" cy="60" r="8" fill="var(--color-paper)" />
+      </svg>
+
       <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-1 flex-col justify-center px-6 md:px-10">
         <motion.p
           initial={{ opacity: 0, y: 10 }}
@@ -49,23 +81,17 @@ export default function Hero() {
           Marketing Executive · Influencer &amp; Content
         </motion.p>
 
-        <h1 className="font-name font-bold leading-[0.92] tracking-normal text-paper">
-          {HEADLINE_LINES.map((line, li) => (
-            <span key={line} className="-mb-[0.12em] block overflow-hidden pb-[0.12em]">
-              <motion.span
-                initial={{ y: "110%" }}
-                animate={{ y: "0%" }}
-                transition={{
-                  duration: 1,
-                  delay: 1.6 + li * 0.1,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
-                className="block text-[11vw] sm:text-[9vw] md:text-[6.5vw] lg:text-[5.5rem]"
-              >
-                {line}
-              </motion.span>
-            </span>
-          ))}
+        <h1 className="font-name font-bold leading-[0.95] tracking-normal text-paper">
+          <span className="-mb-[0.12em] block overflow-hidden whitespace-nowrap pb-[0.12em]">
+            <motion.span
+              initial={{ y: "110%" }}
+              animate={{ y: "0%" }}
+              transition={{ duration: 1, delay: 1.6, ease: [0.16, 1, 0.3, 1] }}
+              className="block text-[clamp(2rem,8vw,4.5rem)]"
+            >
+              {HEADLINE}
+            </motion.span>
+          </span>
         </h1>
 
         <motion.p

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Newsreader, Inter, Space_Mono } from "next/font/google";
+import { Playfair_Display, Libre_Baskerville, Inter, Space_Mono } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 import CustomCursor from "@/components/layout/CustomCursor";
@@ -18,13 +18,12 @@ const displaySerif = Playfair_Display({
 // Used only for Jithin's name (hero headline + loader). A different
 // family from the section-heading serif (Playfair Display), set in
 // mixed case rather than full caps — a lowercase "j" (dot + descender)
-// always reads unambiguously — and kept at a smaller size than a typical
-// hero headline so the full name sits comfortably inside the viewport
-// on every screen with no risk of edge clipping.
-const displayName = Newsreader({
+// always reads unambiguously — on a single line, sized to fit the
+// viewport with margin to spare rather than filling it edge to edge.
+const displayName = Libre_Baskerville({
   variable: "--font-name-serif",
   subsets: ["latin"],
-  weight: ["600", "700"],
+  weight: ["400", "700"],
   style: ["normal", "italic"],
   display: "swap",
 });

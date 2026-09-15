@@ -72,7 +72,7 @@ export default function CustomCursor() {
         style={{
           width: hovering ? 52 : 32,
           height: hovering ? 52 : 32,
-          borderColor: hovering ? "var(--color-accent)" : "rgba(168,60,36,0.45)",
+          borderColor: hovering ? "var(--color-accent)" : "rgba(47,111,237,0.45)",
         }}
         aria-hidden
       />
