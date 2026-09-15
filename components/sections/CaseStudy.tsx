@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { caseStudies } from "@/lib/data";
 import { Reveal } from "@/components/ui/Reveal";
 import Frame from "@/components/ui/Frame";
+import SectionBackground from "@/components/ui/SectionBackground";
 
 export default function CaseStudy() {
   const [activeCase, setActiveCase] = useState(0);
@@ -19,8 +20,18 @@ export default function CaseStudy() {
   }
 
   return (
-    <div id="work" className="relative border-t border-ink-line bg-ink-raised py-24 md:py-36">
-      <div className="mx-auto max-w-7xl px-6 md:px-10">
+    <div id="work" className="relative overflow-hidden border-t border-ink-line bg-ink-raised py-24 md:py-36">
+      <SectionBackground
+        src="/assets/photography/nature-01.jpg"
+        opacity={30}
+        className="absolute inset-x-0 top-0 h-[520px]"
+      />
+      <div
+        className="pointer-events-none absolute inset-x-0 top-0 h-[520px] bg-gradient-to-b from-ink-raised/70 via-ink-raised/85 to-ink-raised"
+        aria-hidden
+      />
+
+      <div className="relative mx-auto max-w-7xl px-6 md:px-10">
         <div className="mb-10 flex flex-wrap items-center justify-between gap-6">
           <div>
             <p className="font-mono text-xs uppercase tracking-[0.3em] text-accent">

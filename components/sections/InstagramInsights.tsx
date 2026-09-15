@@ -2,13 +2,24 @@ import { instagramInsights } from "@/lib/data";
 import { Reveal } from "@/components/ui/Reveal";
 import { SplitBar, RankedBars, Sparkline } from "@/components/ui/InsightBars";
 import Frame from "@/components/ui/Frame";
+import SectionBackground from "@/components/ui/SectionBackground";
 
 export default function InstagramInsights() {
   const d = instagramInsights;
 
   return (
-    <div className="border-t border-ink-line bg-ink-raised py-20 md:py-28">
-      <div className="mx-auto max-w-7xl px-6 md:px-10">
+    <div className="relative overflow-hidden border-t border-ink-line bg-ink-raised py-20 md:py-28">
+      <SectionBackground
+        src="/assets/photography/music-02.jpg"
+        opacity={28}
+        className="absolute inset-x-0 top-0 h-[360px]"
+      />
+      <div
+        className="pointer-events-none absolute inset-x-0 top-0 h-[360px] bg-gradient-to-b from-ink-raised/75 via-ink-raised/85 to-ink-raised"
+        aria-hidden
+      />
+
+      <div className="relative mx-auto max-w-7xl px-6 md:px-10">
         <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="font-mono text-xs uppercase tracking-[0.3em] text-accent">{d.eyebrow}</p>

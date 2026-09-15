@@ -4,14 +4,18 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { skills } from "@/lib/data";
 import { Reveal } from "@/components/ui/Reveal";
+import SectionBackground from "@/components/ui/SectionBackground";
 
 export default function Skills() {
   const [active, setActive] = useState(0);
   const activeCategory = skills.categories[active];
 
   return (
-    <section id="skills" className="relative border-t border-ink-line bg-ink-raised py-24 md:py-36">
-      <div className="mx-auto max-w-7xl px-6 md:px-10">
+    <section id="skills" className="relative overflow-hidden border-t border-ink-line bg-ink-raised py-24 md:py-36">
+      <SectionBackground src="/assets/photography/city-01.jpg" opacity={26} />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink-raised via-ink-raised/85 to-ink-raised" aria-hidden />
+
+      <div className="relative mx-auto max-w-7xl px-6 md:px-10">
         <div className="mb-14 flex items-center gap-4">
           <span className="font-mono text-xs uppercase tracking-[0.3em] text-accent">02</span>
           <span className="h-px flex-1 max-w-16 bg-ink-line" />

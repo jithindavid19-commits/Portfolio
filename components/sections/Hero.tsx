@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import MagneticButton from "@/components/ui/MagneticButton";
+import SectionBackground from "@/components/ui/SectionBackground";
 import { scrollToTarget } from "@/lib/lenisInstance";
 
 const TICKER_ITEMS = [
@@ -25,6 +26,14 @@ export default function Hero() {
       id="top"
       className="theme-inverted relative flex min-h-[100svh] flex-col overflow-hidden bg-ink pt-20"
     >
+      {/* Background photo — a real shot from Jithin's Instagram content
+          grid, tying the intro to "Influencer & Content" marketing. */}
+      <SectionBackground src="/assets/social/content-grid.jpg" opacity={30} />
+      <div
+        className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/35"
+        aria-hidden
+      />
+
       {/* ambient accent glow */}
       <div
         className="pointer-events-none absolute left-1/2 top-1/2 h-[60vmax] w-[60vmax] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-[0.14] blur-[120px]"
@@ -41,36 +50,6 @@ export default function Hero() {
         aria-hidden
       />
 
-      {/* Marketing motif — a faint analytics/trend graphic behind the
-          headline, echoing the "Proof of Work" chart language used later
-          in the page without competing with the name for attention. */}
-      <svg
-        className="pointer-events-none absolute -right-[8%] top-1/2 hidden h-[70vh] w-[60vw] -translate-y-1/2 opacity-[0.14] md:block"
-        viewBox="0 0 600 500"
-        fill="none"
-        aria-hidden
-      >
-        <g stroke="var(--color-accent)" strokeWidth="1.5">
-          <line x1="40" y1="40" x2="40" y2="440" />
-          <line x1="40" y1="440" x2="580" y2="440" />
-        </g>
-        <g fill="var(--color-accent)" opacity="0.5">
-          <rect x="90" y="340" width="46" height="100" />
-          <rect x="190" y="280" width="46" height="160" />
-          <rect x="290" y="220" width="46" height="220" />
-          <rect x="390" y="150" width="46" height="290" />
-          <rect x="490" y="90" width="46" height="350" />
-        </g>
-        <path
-          d="M90 300 L190 240 L290 190 L390 120 L490 60"
-          stroke="var(--color-paper)"
-          strokeWidth="3"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <circle cx="490" cy="60" r="8" fill="var(--color-paper)" />
-      </svg>
-
       <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-1 flex-col justify-center px-6 md:px-10">
         <motion.p
           initial={{ opacity: 0, y: 10 }}
@@ -81,17 +60,15 @@ export default function Hero() {
           Marketing Executive · Influencer &amp; Content
         </motion.p>
 
-        <h1 className="font-name font-bold leading-[0.95] tracking-normal text-paper">
-          <span className="-mb-[0.12em] block overflow-hidden whitespace-nowrap pb-[0.12em]">
-            <motion.span
-              initial={{ y: "110%" }}
-              animate={{ y: "0%" }}
-              transition={{ duration: 1, delay: 1.6, ease: [0.16, 1, 0.3, 1] }}
-              className="block text-[clamp(2rem,8vw,4.5rem)]"
-            >
-              {HEADLINE}
-            </motion.span>
-          </span>
+        <h1 className="font-name font-bold leading-[1.2] tracking-normal text-paper">
+          <motion.span
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 1.6, ease: [0.16, 1, 0.3, 1] }}
+            className="block whitespace-nowrap text-[clamp(2rem,8vw,4.5rem)]"
+          >
+            {HEADLINE}
+          </motion.span>
         </h1>
 
         <motion.p

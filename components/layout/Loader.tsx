@@ -30,16 +30,14 @@ export default function Loader() {
           exit={{ clipPath: "inset(0% 0% 100% 0%)" }}
           transition={{ duration: 0.7, ease: [0.76, 0, 0.24, 1] }}
         >
-          <div className="-mb-[0.12em] overflow-hidden pb-[0.12em]">
-            <motion.p
-              initial={{ y: "100%" }}
-              animate={{ y: "0%" }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
-              className="font-name font-bold text-3xl tracking-tight text-paper md:text-4xl"
-            >
-              Jithin George
-            </motion.p>
-          </div>
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
+            className="font-name font-bold text-3xl leading-normal tracking-normal text-paper md:text-4xl"
+          >
+            Jithin George
+          </motion.p>
           <motion.div
             initial={{ width: 0 }}
             animate={{ width: 160 }}
