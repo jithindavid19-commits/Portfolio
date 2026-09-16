@@ -34,8 +34,8 @@ export default function CaseStudy() {
       id="work"
       className={`theme-${study.slug} relative overflow-hidden border-t border-ink-line bg-ink-raised py-24 transition-colors duration-700 md:py-36`}
     >
-      <SectionBackground src="/assets/backgrounds/analytics-dashboard.jpg" opacity={40} />
-      <div className="pointer-events-none absolute inset-0 bg-ink-raised/45 transition-colors duration-700" aria-hidden />
+      <SectionBackground src="/assets/backgrounds/analytics-dashboard.jpg" opacity={60} />
+      <div className="pointer-events-none absolute inset-0 bg-ink-raised/25 transition-colors duration-700" aria-hidden />
 
       {/* A different "world" per campaign — eleve's telecom signal rings
           vs. Magnifly's dance-ribbon sweep, crossfaded on switch so

@@ -29,8 +29,8 @@ export default function InstagramInsights() {
 
   return (
     <div className="relative overflow-hidden border-t border-ink-line bg-ink-raised py-20 md:py-28">
-      <SectionBackground src="/assets/photography/music-02.jpg" opacity={38} />
-      <div className="pointer-events-none absolute inset-0 bg-ink-raised/50" aria-hidden />
+      <SectionBackground src="/assets/photography/music-02.jpg" opacity={58} />
+      <div className="pointer-events-none absolute inset-0 bg-ink-raised/30" aria-hidden />
 
       <div className="relative mx-auto max-w-7xl px-6 md:px-10">
         <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">

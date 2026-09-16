@@ -7,8 +7,8 @@ export default function Music() {
   return (
     <section id="music" className="theme-inverted relative border-t border-ink-line bg-ink-raised py-24 md:py-36">
       {/* Backdrop — a real photo from one of Jithin's own gigs. */}
-      <SectionBackground src="/assets/photography/music-01.jpg" opacity={60} />
-      <div className="pointer-events-none absolute inset-0 bg-ink/40" aria-hidden />
+      <SectionBackground src="/assets/photography/music-01.jpg" opacity={80} />
+      <div className="pointer-events-none absolute inset-0 bg-ink/25" aria-hidden />
 
       <div className="relative mx-auto max-w-7xl px-6 md:px-10">
         <div className="mb-14 flex items-center gap-4">

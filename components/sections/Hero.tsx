@@ -27,9 +27,9 @@ export default function Hero() {
       className="theme-inverted relative flex min-h-[100svh] flex-col overflow-hidden bg-ink pt-20"
     >
       {/* Background art — a market/growth-chart mood shot Jithin sent. */}
-      <SectionBackground src="/assets/backgrounds/market-chart.jpg" opacity={55} />
+      <SectionBackground src="/assets/backgrounds/market-chart.jpg" opacity={75} />
       <div
-        className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink/85 via-ink/50 to-ink/15"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink/75 via-ink/30 to-transparent"
         aria-hidden
       />
 

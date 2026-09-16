@@ -12,17 +12,13 @@ type SectionBackgroundProps = {
  * theme-color gradient (using the section's own bg-ink/bg-ink-raised
  * token) layered on top wherever text needs a cleaner backdrop.
  *
- * A soft blur (default on) reads as an intentional, ambient backdrop
- * rather than a sharp photo competing with the text on top of it. The
- * image itself is still the full-resolution source — it's scaled up
- * slightly to hide the transparent fringe the blur radius would
- * otherwise sample at the container's edge — so the blur is a design
- * choice, not a quality loss. Pass blur={0} for a crisp image. */
+ * Crisp by default (blur={0}) — pass a blur value explicitly for the
+ * rare spot that wants a softer, more ambient backdrop instead. */
 export default function SectionBackground({
   src,
-  opacity = 35,
+  opacity = 55,
   className = "absolute inset-0",
-  blur = 4,
+  blur = 0,
 }: SectionBackgroundProps) {
   return (
     <div
