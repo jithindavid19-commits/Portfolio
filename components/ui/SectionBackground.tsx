@@ -31,6 +31,7 @@ export default function SectionBackground({
         alt=""
         fill
         sizes="100vw"
+        quality={95}
         className="object-cover"
         style={blur ? { filter: `blur(${blur}px)`, transform: "scale(1.08) translateZ(0)" } : undefined}
       />
