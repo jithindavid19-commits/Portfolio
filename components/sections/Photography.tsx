@@ -18,8 +18,26 @@ export default function Photography() {
   }));
 
   return (
-    <section id="creative" className="relative border-t border-ink-line bg-ink py-24 md:py-36">
-      <div className="mx-auto max-w-7xl px-6 md:px-10">
+    <section id="creative" className="relative overflow-hidden border-t border-ink-line bg-ink py-24 md:py-36">
+      {/* The gallery below carries the imagery, so this backdrop stays
+          to a quiet grid + glow rather than another photo competing
+          with the ones on display. */}
+      <div
+        className="pointer-events-none absolute right-0 top-0 h-[50vmax] w-[50vmax] translate-x-1/3 -translate-y-1/3 rounded-full opacity-[0.1] blur-[120px]"
+        style={{ background: "radial-gradient(circle, var(--color-accent), transparent 65%)" }}
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.05]"
+        style={{
+          backgroundImage:
+            "linear-gradient(var(--color-paper) 1px, transparent 1px), linear-gradient(90deg, var(--color-paper) 1px, transparent 1px)",
+          backgroundSize: "56px 56px",
+        }}
+        aria-hidden
+      />
+
+      <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-10">
         <div className="mb-10 flex items-center gap-4">
           <span className="font-mono text-xs uppercase tracking-[0.3em] text-accent">03</span>
           <span className="h-px flex-1 max-w-16 bg-ink-line" />
@@ -40,7 +58,7 @@ export default function Photography() {
         </div>
       </div>
 
-      <Reveal className="mt-14">
+      <Reveal className="relative z-10 mt-14">
         <div className="no-scrollbar flex snap-x snap-mandatory gap-5 overflow-x-auto px-6 pb-4 md:px-10">
           {photography.categories.map((item, i) => (
             <button

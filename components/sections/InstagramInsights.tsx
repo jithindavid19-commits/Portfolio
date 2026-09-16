@@ -1,8 +1,28 @@
+import type { ReactNode } from "react";
 import { instagramInsights } from "@/lib/data";
 import { Reveal } from "@/components/ui/Reveal";
 import { SplitBar, RankedBars, Sparkline } from "@/components/ui/InsightBars";
 import Frame from "@/components/ui/Frame";
 import SectionBackground from "@/components/ui/SectionBackground";
+
+function PanelIcon({ children }: { children: ReactNode }) {
+  return (
+    <svg
+      width="15"
+      height="15"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="text-accent"
+      aria-hidden
+    >
+      {children}
+    </svg>
+  );
+}
 
 export default function InstagramInsights() {
   const d = instagramInsights;
@@ -59,25 +79,43 @@ export default function InstagramInsights() {
           <Reveal delay={0.1} className="lg:col-span-5">
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
               <div className="border border-ink-line bg-ink-raised p-6">
-                <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.14em] text-paper-dim">
+                <p className="mb-5 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.14em] text-paper-dim">
+                  <PanelIcon>
+                    <path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z" />
+                    <circle cx="12" cy="12" r="2.75" />
+                  </PanelIcon>
                   Viewer split
                 </p>
                 <SplitBar a={d.audienceSplit.a} b={d.audienceSplit.b} />
               </div>
               <div className="border border-ink-line bg-ink-raised p-6">
-                <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.14em] text-paper-dim">
+                <p className="mb-5 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.14em] text-paper-dim">
+                  <PanelIcon>
+                    <circle cx="9" cy="7" r="3" />
+                    <path d="M3.5 19c0-2.7 2.2-4.5 5.5-4.5s5.5 1.8 5.5 4.5M16 4.5a3 3 0 0 1 0 6M18.5 14.2c1.9.4 3 1.7 3 3.3" />
+                  </PanelIcon>
                   Gender
                 </p>
                 <SplitBar a={d.genderSplit.a} b={d.genderSplit.b} />
               </div>
               <div className="border border-ink-line bg-ink-raised p-6">
-                <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.14em] text-paper-dim">
+                <p className="mb-5 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.14em] text-paper-dim">
+                  <PanelIcon>
+                    <rect x="3.5" y="4.5" width="17" height="16" rx="1.5" />
+                    <path d="M3.5 9.5h17M8 3v3M16 3v3" />
+                  </PanelIcon>
                   Age range
                 </p>
                 <RankedBars items={d.ageRange} maxValue={100} />
               </div>
               <div className="border border-ink-line bg-ink-raised p-6">
-                <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.14em] text-paper-dim">
+                <p className="mb-5 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.14em] text-paper-dim">
+                  <PanelIcon>
+                    <rect x="3.5" y="3.5" width="7.5" height="7.5" rx="1" />
+                    <rect x="13" y="3.5" width="7.5" height="7.5" rx="1" />
+                    <rect x="3.5" y="13" width="7.5" height="7.5" rx="1" />
+                    <rect x="13" y="13" width="7.5" height="7.5" rx="1" />
+                  </PanelIcon>
                   Content type
                 </p>
                 <RankedBars items={d.contentType} maxValue={100} />

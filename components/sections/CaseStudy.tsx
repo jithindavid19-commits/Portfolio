@@ -97,6 +97,11 @@ export default function CaseStudy() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.35 }}
             className="mt-6 rounded-sm bg-ink-raised/90 p-6 backdrop-blur-sm md:p-10"
+            style={{
+              backgroundImage:
+                "linear-gradient(color-mix(in srgb, var(--color-paper) 4%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in srgb, var(--color-paper) 4%, transparent) 1px, transparent 1px)",
+              backgroundSize: "40px 40px",
+            }}
           >
             <div className="divide-y divide-ink-line border-y border-ink-line">
               {study.stages.map((stage, i) => {

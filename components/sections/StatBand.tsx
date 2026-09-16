@@ -14,8 +14,28 @@ const ICONS = [
 
 export default function StatBand() {
   return (
-    <div className="border-y border-ink-line bg-ink-raised">
-      <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-y divide-ink-line md:grid-cols-4 md:divide-y-0">
+    <div className="relative overflow-hidden border-y border-ink-line bg-ink-raised">
+      {/* Same designed gradient-mesh language as Skills, at a lighter
+          touch — keeps this thin band from reading as a flat strip. */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-25"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 8% 30%, var(--color-accent) 0%, transparent 45%), radial-gradient(circle at 92% 70%, var(--color-accent-dim) 0%, transparent 45%)",
+        }}
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.06]"
+        style={{
+          backgroundImage:
+            "linear-gradient(var(--color-paper) 1px, transparent 1px), linear-gradient(90deg, var(--color-paper) 1px, transparent 1px)",
+          backgroundSize: "48px 48px",
+        }}
+        aria-hidden
+      />
+
+      <div className="relative mx-auto grid max-w-7xl grid-cols-2 divide-x divide-y divide-ink-line md:grid-cols-4 md:divide-y-0">
         {statBand.map((stat, i) => (
           <Reveal key={stat.label} delay={i * 0.06} y={14}>
             <div className="group px-6 py-8 text-center md:py-10">

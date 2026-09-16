@@ -22,7 +22,7 @@ export default function SectionBackground({
   src,
   opacity = 35,
   className = "absolute inset-0",
-  blur = 6,
+  blur = 4,
 }: SectionBackgroundProps) {
   return (
     <div
