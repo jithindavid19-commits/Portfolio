@@ -61,8 +61,10 @@ export default function Contact() {
 
         <Reveal delay={0.3} className="mt-12">
           <MagneticButton
-            href={`mailto:${profile.email}`}
-            className="group inline-flex items-center gap-4 border-b-2 border-accent pb-2 font-display text-3xl text-paper transition-colors hover:text-accent sm:text-5xl"
+            href={`https://mail.google.com/mail/?view=cm&fs=1&to=${profile.email}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-4 pb-2 font-display text-3xl text-paper transition-colors hover:text-accent sm:text-5xl"
             strength={0.25}
           >
             {profile.email}

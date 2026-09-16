@@ -29,6 +29,23 @@
   --color-accent-dim: #a8c8ff;
 }
 
+/* Per-campaign "world" shift inside the Work section — switching the
+ * active case study re-themes the accent (and the ink-line/ink-raised
+ * warmth) to that brand's own mood, so picking the other campaign
+ * genuinely feels like stepping into a different project rather than
+ * just swapping text. Only the accent-driven tokens change; ink/paper
+ * base tokens stay put so body text keeps its contrast guarantees. */
+.theme-eleve {
+  --color-accent: #d1461f;
+  --color-accent-dim: #8f2c11;
+  --color-ink-line: #dbb49e;
+}
+.theme-magnifly {
+  --color-accent: #b62dbf;
+  --color-accent-dim: #6f1c77;
+  --color-ink-line: #ddb3e2;
+}
+
 @theme inline {
   --color-ink: var(--color-ink);
   --color-ink-raised: var(--color-ink-raised);

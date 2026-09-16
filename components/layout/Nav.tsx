@@ -116,8 +116,22 @@ export default function Nav() {
             animate={{ clipPath: "circle(150% at 100% 0%)" }}
             exit={{ clipPath: "circle(0% at 100% 0%)" }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="theme-inverted fixed inset-0 z-[60] flex flex-col justify-center gap-2 bg-ink px-8 md:hidden"
+            className="theme-inverted fixed inset-0 z-[60] flex flex-col justify-center gap-2 overflow-hidden bg-ink px-8 md:hidden"
           >
+            <div
+              className="pointer-events-none absolute right-0 top-0 h-[60vmax] w-[60vmax] translate-x-1/3 -translate-y-1/3 rounded-full opacity-[0.14] blur-[100px]"
+              style={{ background: "radial-gradient(circle, var(--color-accent), transparent 65%)" }}
+              aria-hidden
+            />
+            <div
+              className="pointer-events-none absolute inset-0 opacity-[0.05]"
+              style={{
+                backgroundImage:
+                  "linear-gradient(var(--color-paper) 1px, transparent 1px), linear-gradient(90deg, var(--color-paper) 1px, transparent 1px)",
+                backgroundSize: "48px 48px",
+              }}
+              aria-hidden
+            />
             {LINKS.map((link, i) => (
               <motion.a
                 key={link.href}

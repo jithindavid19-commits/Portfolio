@@ -30,14 +30,76 @@ export default function CaseStudy() {
   }
 
   return (
-    <div id="work" className="relative overflow-hidden border-t border-ink-line bg-ink-raised py-24 md:py-36">
+    <div
+      id="work"
+      className={`theme-${study.slug} relative overflow-hidden border-t border-ink-line bg-ink-raised py-24 transition-colors duration-700 md:py-36`}
+    >
       <SectionBackground src="/assets/backgrounds/analytics-dashboard.jpg" opacity={40} />
-      <div className="pointer-events-none absolute inset-0 bg-ink-raised/45" aria-hidden />
+      <div className="pointer-events-none absolute inset-0 bg-ink-raised/45 transition-colors duration-700" aria-hidden />
+
+      {/* A different "world" per campaign — eleve's telecom signal rings
+          vs. Magnifly's dance-ribbon sweep, crossfaded on switch so
+          picking the other tab feels like stepping somewhere new. */}
+      <AnimatePresence mode="wait">
+        {study.slug === "eleve" ? (
+          <motion.svg
+            key="eleve-motif"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.16 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.8 }}
+            className="pointer-events-none absolute -right-[10%] top-0 h-full w-[70%]"
+            viewBox="0 0 400 400"
+            preserveAspectRatio="xMidYMid slice"
+            aria-hidden
+          >
+            {[60, 110, 160, 210, 260].map((r, i) => (
+              <motion.circle
+                key={r}
+                cx="200"
+                cy="160"
+                r={r}
+                fill="none"
+                stroke="var(--color-accent)"
+                strokeWidth="1.5"
+                animate={{ opacity: [0.15, 0.6, 0.15], scale: [1, 1.04, 1] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: i * 0.3 }}
+              />
+            ))}
+            <circle cx="200" cy="160" r="6" fill="var(--color-accent)" />
+          </motion.svg>
+        ) : (
+          <motion.svg
+            key="magnifly-motif"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.16 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.8 }}
+            className="pointer-events-none absolute -right-[10%] top-0 h-full w-[70%]"
+            viewBox="0 0 400 400"
+            preserveAspectRatio="xMidYMid slice"
+            aria-hidden
+          >
+            {[0, 1, 2, 3].map((i) => (
+              <motion.path
+                key={i}
+                d={`M -20 ${90 + i * 60} Q 120 ${20 + i * 60} 220 ${100 + i * 60} T 440 ${70 + i * 60}`}
+                fill="none"
+                stroke="var(--color-accent)"
+                strokeWidth="2"
+                strokeLinecap="round"
+                animate={{ pathLength: [0, 1], pathOffset: [0, 0] }}
+                transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: i * 0.25 }}
+              />
+            ))}
+          </motion.svg>
+        )}
+      </AnimatePresence>
 
       <div className="relative mx-auto max-w-7xl px-6 md:px-10">
         <div className="mb-10 flex flex-wrap items-center justify-between gap-6">
           <div>
-            <p className="font-mono text-xs uppercase tracking-[0.3em] text-accent">
+            <p className="font-mono text-xs uppercase tracking-[0.3em] text-accent transition-colors duration-700">
               How I Think
             </p>
             <Reveal>
@@ -53,7 +115,7 @@ export default function CaseStudy() {
                 href={pdf.path}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-5 inline-flex items-center gap-2 bg-accent px-5 py-3 font-mono text-[11px] uppercase tracking-[0.16em] text-ink transition-transform hover:scale-[1.03]"
+                className="mt-5 inline-flex items-center gap-2 bg-accent px-5 py-3 font-mono text-[11px] uppercase tracking-[0.16em] text-ink transition-[background-color,transform] duration-700 hover:scale-[1.03]"
                 data-cursor="magnetic"
               >
                 Open Full Campaign PDF ↗
@@ -67,7 +129,7 @@ export default function CaseStudy() {
                 key={c.slug}
                 onClick={() => selectCase(i)}
                 whileTap={{ scale: 0.94 }}
-                className={`relative overflow-hidden border px-4 py-2 font-mono text-[11px] uppercase tracking-[0.16em] transition-colors ${
+                className={`relative overflow-hidden border px-4 py-2 font-mono text-[11px] uppercase tracking-[0.16em] transition-colors duration-700 ${
                   activeCase === i
                     ? "border-accent text-ink"
                     : "border-ink-line text-paper-dim hover:border-paper-dim hover:text-paper"
@@ -96,7 +158,7 @@ export default function CaseStudy() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.35 }}
-            className="mt-6 rounded-sm bg-ink-raised/90 p-6 backdrop-blur-sm md:p-10"
+            className="mt-6 rounded-sm bg-ink-raised/90 p-6 backdrop-blur-sm transition-colors duration-700 md:p-10"
             style={{
               backgroundImage:
                 "linear-gradient(color-mix(in srgb, var(--color-paper) 4%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in srgb, var(--color-paper) 4%, transparent) 1px, transparent 1px)",
@@ -115,7 +177,7 @@ export default function CaseStudy() {
                       aria-expanded={isOpen}
                     >
                       <span className="flex items-center gap-5">
-                        <span className={`w-8 shrink-0 font-mono text-xs transition-colors ${isOpen ? "text-accent" : "text-paper-dim"}`}>
+                        <span className={`w-8 shrink-0 font-mono text-xs transition-colors duration-700 ${isOpen ? "text-accent" : "text-paper-dim"}`}>
                           {String(i + 1).padStart(2, "0")}
                         </span>
                         <svg
@@ -127,7 +189,7 @@ export default function CaseStudy() {
                           strokeWidth="1.5"
                           strokeLinecap="round"
                           strokeLinejoin="round"
-                          className={`hidden shrink-0 transition-colors sm:block ${isOpen ? "text-accent" : "text-paper-dim"}`}
+                          className={`hidden shrink-0 transition-colors duration-700 sm:block ${isOpen ? "text-accent" : "text-paper-dim"}`}
                           aria-hidden
                         >
                           {STAGE_ICONS[i % STAGE_ICONS.length]}
@@ -178,7 +240,7 @@ export default function CaseStudy() {
                 <div className="grid grid-cols-2 gap-x-8 gap-y-6 sm:grid-cols-3 md:grid-cols-5">
                   {study.creatorGroups.map((group) => (
                     <div key={group.category}>
-                      <p className="mb-3 font-mono text-[10px] uppercase tracking-[0.14em] text-accent">
+                      <p className="mb-3 font-mono text-[10px] uppercase tracking-[0.14em] text-accent transition-colors duration-700">
                         {group.category}
                         {group.total ? ` · ${group.total}` : ""}
                       </p>

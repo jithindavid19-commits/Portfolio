@@ -30,6 +30,20 @@ export default function Loader() {
           exit={{ clipPath: "inset(0% 0% 100% 0%)" }}
           transition={{ duration: 0.7, ease: [0.76, 0, 0.24, 1] }}
         >
+          <div
+            className="pointer-events-none absolute left-1/2 top-1/2 h-[70vmax] w-[70vmax] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-[0.14] blur-[120px]"
+            style={{ background: "radial-gradient(circle, var(--color-accent), transparent 65%)" }}
+            aria-hidden
+          />
+          <div
+            className="pointer-events-none absolute inset-0 opacity-[0.05]"
+            style={{
+              backgroundImage:
+                "linear-gradient(var(--color-paper) 1px, transparent 1px), linear-gradient(90deg, var(--color-paper) 1px, transparent 1px)",
+              backgroundSize: "56px 56px",
+            }}
+            aria-hidden
+          />
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
