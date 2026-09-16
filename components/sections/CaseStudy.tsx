@@ -21,7 +21,7 @@ export default function CaseStudy() {
 
   return (
     <div id="work" className="relative overflow-hidden border-t border-ink-line bg-ink-raised py-24 md:py-36">
-      <SectionBackground src="/assets/photography/nature-01.jpg" opacity={40} />
+      <SectionBackground src="/assets/backgrounds/analytics-dashboard.jpg" opacity={40} />
       <div className="pointer-events-none absolute inset-0 bg-ink-raised/45" aria-hidden />
 
       <div className="relative mx-auto max-w-7xl px-6 md:px-10">

@@ -26,11 +26,10 @@ export default function Hero() {
       id="top"
       className="theme-inverted relative flex min-h-[100svh] flex-col overflow-hidden bg-ink pt-20"
     >
-      {/* Background photo — a real shot from Jithin's Instagram content
-          grid, tying the intro to "Influencer & Content" marketing. */}
-      <SectionBackground src="/assets/social/content-grid.jpg" opacity={42} />
+      {/* Background art — a market/growth-chart mood shot Jithin sent. */}
+      <SectionBackground src="/assets/backgrounds/market-chart.jpg" opacity={55} />
       <div
-        className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink/80 via-ink/50 to-ink/20"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink/85 via-ink/50 to-ink/15"
         aria-hidden
       />
 
