@@ -6,9 +6,25 @@ import MagneticButton from "@/components/ui/MagneticButton";
 import SectionBackground from "@/components/ui/SectionBackground";
 
 const LINKS = [
-  { label: "LinkedIn", href: profile.linkedin.url, sub: profile.linkedin.label },
-  { label: "Instagram", href: profile.instagram.url, sub: profile.instagram.handle },
-  { label: "Download CV", href: profile.cvPath, sub: "PDF", download: true },
+  {
+    label: "LinkedIn",
+    href: profile.linkedin.url,
+    sub: profile.linkedin.label,
+    icon: <path d="M4.5 8.5h3V19h-3V8.5ZM6 3.5A1.75 1.75 0 1 1 6 7a1.75 1.75 0 0 1 0-3.5ZM10.5 8.5h3v1.4c.6-.9 1.6-1.6 3-1.6 2.3 0 3.5 1.5 3.5 4.2V19h-3v-5.6c0-1.2-.5-2-1.6-2s-1.9.8-1.9 2V19h-3V8.5Z" />,
+  },
+  {
+    label: "Instagram",
+    href: profile.instagram.url,
+    sub: profile.instagram.handle,
+    icon: <path d="M7 3.5h10a3.5 3.5 0 0 1 3.5 3.5v10a3.5 3.5 0 0 1-3.5 3.5H7a3.5 3.5 0 0 1-3.5-3.5V7A3.5 3.5 0 0 1 7 3.5Zm5 4.75a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5Zm5-0.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z" />,
+  },
+  {
+    label: "Download CV",
+    href: profile.cvPath,
+    sub: "PDF",
+    download: true,
+    icon: <path d="M12 3v11m0 0-4-4m4 4 4-4M5 17v2a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-2" />,
+  },
 ];
 
 export default function Contact() {
@@ -70,7 +86,20 @@ export default function Contact() {
               className="group flex flex-col gap-1 border border-ink-line px-6 py-4 transition-colors hover:border-accent"
               data-cursor="magnetic"
             >
-              <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-paper transition-colors group-hover:text-accent">
+              <span className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.16em] text-paper transition-colors group-hover:text-accent">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.6"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden
+                >
+                  {link.icon}
+                </svg>
                 {link.label}
               </span>
               <span className="text-xs text-paper-dim">{link.sub}</span>

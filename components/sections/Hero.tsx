@@ -138,6 +138,36 @@ export default function Hero() {
           />
         </span>
       </motion.div>
+
+      {/* Rotating "open to work" seal — a small, slowly-spinning stamp
+          echoing the marketing-badge/seal motif, tucked in the corner
+          so it reads as a flourish rather than competing with the name. */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.85 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 2.4, duration: 0.6 }}
+        className="pointer-events-none absolute right-6 top-24 hidden h-24 w-24 md:right-10 md:block lg:h-28 lg:w-28"
+      >
+        <motion.svg
+          viewBox="0 0 100 100"
+          className="h-full w-full"
+          animate={{ rotate: 360 }}
+          transition={{ duration: 22, repeat: Infinity, ease: "linear" }}
+        >
+          <defs>
+            <path id="hero-badge-circle" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0" />
+          </defs>
+          <circle cx="50" cy="50" r="49" fill="none" stroke="var(--color-ink-line)" strokeWidth="0.75" />
+          <text fill="var(--color-paper-dim)" fontSize="6.3" letterSpacing="0.1em">
+            <textPath href="#hero-badge-circle">
+              OPEN TO WORK • MARKETING × CONTENT •
+            </textPath>
+          </text>
+        </motion.svg>
+        <span className="absolute inset-0 flex items-center justify-center">
+          <span className="h-2.5 w-2.5 rounded-full bg-accent" />
+        </span>
+      </motion.div>
     </section>
   );
 }

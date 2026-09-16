@@ -1,11 +1,21 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { caseStudies } from "@/lib/data";
 import { Reveal } from "@/components/ui/Reveal";
 import Frame from "@/components/ui/Frame";
 import SectionBackground from "@/components/ui/SectionBackground";
+
+// Matched by stage index rather than label text, since both case
+// studies follow the same brief -> approach -> selection -> deal-making
+// arc even though their stage labels differ slightly.
+const STAGE_ICONS: ReactNode[] = [
+  <path key="brief" d="M7 3h7l4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Zm7 0v4h4M9 12h6M9 15.5h6M9 8.5h3" />,
+  <path key="approach" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm4-13-5.5 2.5L8 16l5.5-2.5L16 8Z" />,
+  <path key="selection" d="M7 10.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Zm10 0a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5ZM2.5 18c0-2.8 2-4.5 4.5-4.5s4.5 1.7 4.5 4.5M12.5 18c0-2.8 2-4.5 4.5-4.5s4.5 1.7 4.5 4.5" />,
+  <path key="deal" d="m8 12 2.5 2.5L16 9M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0Z" />,
+];
 
 export default function CaseStudy() {
   const [activeCase, setActiveCase] = useState(0);
@@ -103,6 +113,20 @@ export default function CaseStudy() {
                         <span className={`w-8 shrink-0 font-mono text-xs transition-colors ${isOpen ? "text-accent" : "text-paper-dim"}`}>
                           {String(i + 1).padStart(2, "0")}
                         </span>
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className={`hidden shrink-0 transition-colors sm:block ${isOpen ? "text-accent" : "text-paper-dim"}`}
+                          aria-hidden
+                        >
+                          {STAGE_ICONS[i % STAGE_ICONS.length]}
+                        </svg>
                         <span className="font-display text-xl text-paper md:text-2xl">
                           {stage.label}
                         </span>

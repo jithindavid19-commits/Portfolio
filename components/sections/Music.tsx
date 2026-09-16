@@ -17,6 +17,16 @@ export default function Music() {
           <span className="font-mono text-xs uppercase tracking-[0.3em] text-paper-dim">
             {music.eyebrow}
           </span>
+          {/* Little equalizer flourish — a small nod to the DJ set itself. */}
+          <span className="flex items-end gap-[3px]" aria-hidden>
+            {[0, 0.15, 0.3, 0.1].map((delay, i) => (
+              <span
+                key={i}
+                className="h-3.5 w-[3px] origin-bottom animate-eq rounded-full bg-accent"
+                style={{ animationDelay: `${delay}s` }}
+              />
+            ))}
+          </span>
         </div>
 
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-14">

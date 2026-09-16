@@ -1,9 +1,19 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { skills } from "@/lib/data";
 import { Reveal } from "@/components/ui/Reveal";
+
+const CATEGORY_ICONS: Record<string, ReactNode> = {
+  marketing: (
+    <path d="M3 10v4a1 1 0 0 0 1 1h2l3.5 5v-6M3 10l7.5-5v16M3 10h2m14-6-4 4v4l4 4a9 9 0 0 0 0-12Z" />
+  ),
+  analytics: <path d="M4 20V10m6.5 10V4m6.5 16v-7" />,
+  creative: (
+    <path d="M9 18a6 6 0 1 1 6 0M9 18v2h6v-2M12 2v3M4.2 5.2l2 2M19.8 5.2l-2 2" />
+  ),
+};
 
 export default function Skills() {
   const [active, setActive] = useState(0);
@@ -58,7 +68,23 @@ export default function Skills() {
                       transition={{ type: "spring", stiffness: 300, damping: 30 }}
                     />
                   )}
-                  <span className="relative">{cat.label}</span>
+                  <span className="relative flex items-center gap-2.5">
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.6"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="shrink-0"
+                      aria-hidden
+                    >
+                      {CATEGORY_ICONS[cat.key]}
+                    </svg>
+                    {cat.label}
+                  </span>
                 </motion.button>
               ))}
             </div>
