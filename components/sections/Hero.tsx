@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import MagneticButton from "@/components/ui/MagneticButton";
 import SectionBackground from "@/components/ui/SectionBackground";
 import { scrollToTarget } from "@/lib/lenisInstance";
@@ -13,6 +14,19 @@ const TICKER_ITEMS = [
   "Creator Partnerships",
 ];
 
+// Small "signal" points drifting over the chart backdrop — a nod to the
+// market-chart photo's own data-point language, kept sparse and slow so
+// it reads as ambient rather than busy.
+const SIGNAL_POINTS = [
+  { top: "18%", left: "62%", delay: 0 },
+  { top: "34%", left: "80%", delay: 0.6 },
+  { top: "52%", left: "58%", delay: 1.1 },
+  { top: "66%", left: "86%", delay: 0.3 },
+  { top: "24%", left: "92%", delay: 1.6 },
+  { top: "45%", left: "70%", delay: 0.9 },
+  { top: "73%", left: "64%", delay: 1.9 },
+];
+
 // Rendered in mixed case rather than full caps so the lowercase "j" (with
 // its dot and descender) reads unambiguously — no serif/Didone capital J
 // design, however hooked, seemed to read as distinct from "I" at a glance.
@@ -21,17 +35,42 @@ const TICKER_ITEMS = [
 const HEADLINE = "Jithin George";
 
 export default function Hero() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end start"],
+  });
+  // Subtle parallax — the photo drifts slower than the scroll itself, so the
+  // section gains a little depth instead of feeling like a flat sticker.
+  const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "18%"]);
+
   return (
     <section
+      ref={sectionRef}
       id="top"
       className="theme-inverted relative flex min-h-[100svh] flex-col overflow-hidden bg-ink pt-20"
     >
       {/* Background art — a market/growth-chart mood shot Jithin sent. */}
-      <SectionBackground src="/assets/backgrounds/market-chart.jpg" opacity={75} />
+      <motion.div className="absolute inset-0" style={{ y: bgY }}>
+        <SectionBackground src="/assets/backgrounds/market-chart.jpg" opacity={75} className="absolute inset-0 -top-[10%] h-[120%]" />
+      </motion.div>
       <div
         className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink/75 via-ink/30 to-transparent"
         aria-hidden
       />
+
+      {/* drifting signal points — echoes the chart photo's own data dots */}
+      <div className="pointer-events-none absolute inset-0 hidden md:block" aria-hidden>
+        {SIGNAL_POINTS.map((p, i) => (
+          <motion.span
+            key={i}
+            className="absolute h-1.5 w-1.5 rounded-full bg-accent"
+            style={{ top: p.top, left: p.left }}
+            animate={{ opacity: [0.15, 0.8, 0.15], y: [0, -10, 0] }}
+            transition={{ duration: 4.5, repeat: Infinity, delay: p.delay, ease: "easeInOut" }}
+          />
+        ))}
+      </div>
 
       {/* ambient accent glow */}
       <div
@@ -59,16 +98,38 @@ export default function Hero() {
           Marketing Executive · Influencer &amp; Content
         </motion.p>
 
-        <h1 className="font-name font-bold leading-[1.2] tracking-normal text-paper">
-          <motion.span
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 1.6, ease: [0.16, 1, 0.3, 1] }}
-            className="block whitespace-nowrap text-[clamp(2rem,8vw,4.5rem)]"
+        <div className="relative inline-block">
+          <h1 className="font-name font-bold leading-[1.2] tracking-normal text-paper">
+            <motion.span
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, delay: 1.6, ease: [0.16, 1, 0.3, 1] }}
+              className="block whitespace-nowrap text-[clamp(2rem,8vw,4.5rem)]"
+            >
+              {HEADLINE}
+            </motion.span>
+          </h1>
+          {/* A hand-drawn stroke that signs itself in under the name once
+              it lands — a small signature flourish rather than a plain
+              static underline. */}
+          <motion.svg
+            viewBox="0 0 300 24"
+            preserveAspectRatio="none"
+            className="pointer-events-none absolute -bottom-1 left-0 hidden h-4 w-full sm:block"
+            aria-hidden
           >
-            {HEADLINE}
-          </motion.span>
-        </h1>
+            <motion.path
+              d="M2 12 Q38 3 76 13 T154 10 T232 15 T298 9"
+              fill="none"
+              stroke="var(--color-accent)"
+              strokeWidth="3"
+              strokeLinecap="round"
+              initial={{ pathLength: 0, opacity: 0 }}
+              animate={{ pathLength: 1, opacity: 1 }}
+              transition={{ duration: 1, delay: 2.1, ease: [0.16, 1, 0.3, 1] }}
+            />
+          </motion.svg>
+        </div>
 
         <motion.p
           initial={{ opacity: 0, y: 16 }}
