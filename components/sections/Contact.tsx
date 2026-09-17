@@ -18,14 +18,7 @@ const LINKS = [
     sub: profile.instagram.handle,
     icon: <path d="M7 3.5h10a3.5 3.5 0 0 1 3.5 3.5v10a3.5 3.5 0 0 1-3.5 3.5H7a3.5 3.5 0 0 1-3.5-3.5V7A3.5 3.5 0 0 1 7 3.5Zm5 4.75a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5Zm5-0.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z" />,
   },
-  {
-    label: "Download CV",
-    href: profile.cvPath,
-    sub: "PDF",
-    download: true,
-    icon: <path d="M12 3v11m0 0-4-4m4 4 4-4M5 17v2a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-2" />,
-  },
-];
+] as const;
 
 export default function Contact() {
   return (
@@ -82,9 +75,8 @@ export default function Contact() {
             <a
               key={link.label}
               href={link.href}
-              target={link.download ? undefined : "_blank"}
+              target="_blank"
               rel="noopener noreferrer"
-              download={link.download}
               className="group flex flex-col gap-1 border border-ink-line px-6 py-4 transition-colors hover:border-accent"
               data-cursor="magnetic"
             >
