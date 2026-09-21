@@ -330,6 +330,133 @@ export const music = {
   poster: "/assets/music/djing-poster.jpg",
 };
 
+// Content for the standalone /presskit route — 1111freq's electronic press
+// kit. Separate from `music` (the small DJing section on the marketing
+// homepage): this is the full EPK, sourced from the 2024 "Eargasm" media
+// kit PDF (Canva) plus the current @1111freq handle in `profile`. Every
+// venue, lineup and date below is taken directly from that kit's flyers —
+// nothing invented.
+export const pressKit = {
+  artist: {
+    current: "1111freq",
+    formerly: "Eargasm",
+    tagline: "Groovy, raw, industrial techno.",
+    origin: "Mumbai, India",
+    base: "UK",
+    activeSince: "2021",
+  },
+  sound: {
+    eyebrow: "The Sound",
+    title: "Groovy. Raw. Industrial.",
+    paragraphs: [
+      "1111freq plays techno the way it's meant to be played: groovy, raw and unmistakably industrial. Rolling, hypnotic low end, stripped-back drum work and a warehouse-honed edge — sets built to move a room through peak time, not just fill it.",
+      "Sonic reference points: Alarico, Rodhad, Ignez, Kuss — the kind of hypnotic, dub-techno-adjacent groove and mechanical, textured percussion that rewards a proper system and a dark room. Trained at Mumbai's Hi-Tech DJ Academy (2021, techno specialisation) and sharpened across three years on Mumbai's club circuit, the approach stays functional first: read the floor, build the tension, let the low end do the talking.",
+    ],
+    tags: ["Groovy Techno", "Raw Techno", "Industrial Techno", "Peak Time", "Hypnotic / Dub Techno"],
+    referencePoints: ["Alarico", "Rodhad", "Ignez", "Kuss"],
+  },
+  nameChange: {
+    eyebrow: "The Name",
+    title: "Eargasm → 1111freq",
+    then: {
+      label: "Eargasm",
+      period: "Mumbai · 2021 – 2024",
+      text: "The name that carried three years of sets across Mumbai's clubs — opening and closing for touring international names, holding down commercial nights, and pushing techno into rooms that didn't always ask for it.",
+    },
+    now: {
+      label: "1111freq",
+      period: "UK · 2025 —",
+      text: "A relocation to the UK closed one chapter and opened another. 1111freq is a reset: same ear, same low end, new city, new floors to win over. No UK flyers yet — that's next.",
+    },
+  },
+  performances: {
+    eyebrow: "Selected Performances",
+    title: "As Eargasm — Mumbai, 2022–2024",
+    entries: [
+      {
+        event: "Technora",
+        venue: "Esora × V Are",
+        date: "22 Oct 2023",
+        lineup: "w/ Akhlad Ahmed (Suprematic Sounds), Messiah, Rohdiem, Lenny",
+        image: "/assets/presskit/flyer-technora-2023.jpg",
+      },
+      {
+        event: "Secret Halloween",
+        venue: "Secret Cave",
+        date: "28 Oct 2023",
+        lineup: "Headline set — \"No trick, no treat, only techno\"",
+        image: "/assets/presskit/flyer-secret-halloween.jpg",
+      },
+      {
+        event: "Eve: Sunday Sundowner",
+        venue: "Rascals",
+        date: "29 May",
+        lineup: "w/ T'tunes (birthday set), Neurodive, Not Avent",
+        image: "/assets/presskit/flyer-sunday-sundowner.jpg",
+      },
+      {
+        event: "Technora",
+        venue: "Esora × V Are × Elevate",
+        date: "15 Oct 2022",
+        lineup: "w/ Kollision, Journobeats, Sonic Vision, Hypertronix",
+        image: "/assets/presskit/flyer-technora-2022.jpg",
+      },
+      {
+        event: "Secret Cave Night",
+        venue: "Secret Cave",
+        date: "15 Dec",
+        lineup: "w/ Akhlad Ahmed (Suprematic Sounds), Delta Culture, Jeet Vasani",
+        image: "/assets/presskit/flyer-delta-culture.jpg",
+      },
+      {
+        event: "Secret Cave Night",
+        venue: "Secret Cave",
+        date: "21 Jan",
+        lineup: "w/ Messiah, Rohdiem",
+        image: "/assets/presskit/flyer-rohdiem-messiah.jpg",
+      },
+    ],
+  },
+  clubs: [
+    "Secret Cave",
+    "Kitty Su",
+    "The List",
+    "The Orange Mint",
+    "Esora",
+    "The Park",
+    "Rascals",
+    "The Penthouzz",
+  ],
+  stats: [
+    { value: "2021", label: "DJing since" },
+    { value: "8+", label: "Clubs played" },
+    { value: "6", label: "Documented sets" },
+    { value: "UK", label: "Now based" },
+  ],
+  rider: {
+    eyebrow: "Technical",
+    title: "Set-up & availability",
+    items: [
+      "Plays via Rekordbox (USB / CDJ set-up)",
+      "Comfortable opening or closing a night",
+      "Genre focus: techno — groovy, raw, industrial",
+      "Broader catalogue: progressive house, commercial, hip hop, moombahton",
+      "Trained: Hi-Tech DJ Academy, Mumbai (2021) — techno specialisation",
+      "Background: vocalist & guitarist since school",
+    ],
+  },
+  quote: {
+    text: "Power-packed sets, capable of both opening and closing for international artists — an immersive experience for every music enthusiast in the room.",
+    attribution: "1111freq, on the approach",
+  },
+  booking: {
+    eyebrow: "Booking",
+    title: "Let's get something loud on the calendar.",
+    sub: "Open for UK & EU club nights, warehouse parties and techno-focused lineups.",
+    soundcloud: "Jithin George",
+  },
+};
+
 export const contact = {
   eyebrow: "Contact",
   headline: "Let's make something people notice.",

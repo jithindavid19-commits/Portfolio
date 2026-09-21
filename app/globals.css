@@ -13,6 +13,7 @@
   --color-paper-dim: #4d6480;
   --color-accent: #2f6fed;
   --color-accent-dim: #1a3f91;
+  --color-accent-2: #2f6fed;
 }
 
 /* Deep navy counterpart, used on select sections (Hero, Music, Contact)
@@ -46,6 +47,22 @@
   --color-ink-line: #ddb3e2;
 }
 
+/* 1111freq press kit — a deliberate break from the site's ice-blue editorial
+ * mood into something raw and industrial: near-black concrete, acid-green
+ * accent, a hot-pink secondary for the rare highlight. Same token names as
+ * everywhere else, so Frame/Reveal/MagneticButton/SectionBackground all
+ * re-skin for free within this scope. */
+.theme-1111freq {
+  --color-ink: #060606;
+  --color-ink-raised: #131313;
+  --color-ink-line: #2c2c2c;
+  --color-paper: #f2f1ec;
+  --color-paper-dim: #96968f;
+  --color-accent: #cdff4d;
+  --color-accent-dim: #7c9a2c;
+  --color-accent-2: #ff2f63;
+}
+
 @theme inline {
   --color-ink: var(--color-ink);
   --color-ink-raised: var(--color-ink-raised);
@@ -54,6 +71,7 @@
   --color-paper-dim: var(--color-paper-dim);
   --color-accent: var(--color-accent);
   --color-accent-dim: var(--color-accent-dim);
+  --color-accent-2: var(--color-accent-2);
 
   --font-display: var(--font-display-serif);
   --font-name: var(--font-name-serif);

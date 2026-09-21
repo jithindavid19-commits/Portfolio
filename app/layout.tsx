@@ -3,9 +3,6 @@ import { Playfair_Display, Libre_Baskerville, Inter, Space_Mono } from "next/fon
 import "./globals.css";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 import CustomCursor from "@/components/layout/CustomCursor";
-import Loader from "@/components/layout/Loader";
-import Nav from "@/components/layout/Nav";
-import Footer from "@/components/layout/Footer";
 import { profile } from "@/lib/data";
 
 const displaySerif = Playfair_Display({
@@ -115,13 +112,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           Skip to content
         </a>
         <div className="grain-overlay" aria-hidden />
-        <Loader />
         <CustomCursor />
-        <SmoothScroll>
-          <Nav />
-          <main id="main">{children}</main>
-          <Footer />
-        </SmoothScroll>
+        <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
   );
