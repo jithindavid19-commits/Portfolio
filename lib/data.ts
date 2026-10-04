@@ -13,7 +13,6 @@ export const profile = {
     label: "linkedin.com/in/jithin-george-jj1999",
     url: "https://www.linkedin.com/in/jithin-george-jj1999",
   },
-  cvPath: "/JITHIN_GEORGE_CV.pdf",
 };
 
 export const about = {
@@ -110,10 +109,9 @@ export const skills = {
 };
 
 // A compact proof-of-credibility band shown right under the hero, in place
-// of a full job-history section (Jithin's CV covers that in detail — see
-// the Download CV link in Contact). Every figure here is real, drawn
-// directly from the CV: Qyuki (campaigns delivered), Tring (creator
-// database + performance analysis), Aspiring Productions (turnaround).
+// of a full job-history section. Every figure here is real, drawn directly
+// from the CV: Qyuki (campaigns delivered), Tring (creator database +
+// performance analysis), Aspiring Productions (turnaround).
 export const statBand = [
   { value: "500+", label: "Creators Managed" },
   { value: "4", label: "Campaigns Delivered" },
