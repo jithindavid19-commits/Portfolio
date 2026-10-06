@@ -71,9 +71,9 @@ para("Customer-focused retail and front of house professional with retail experi
 
 heading("Retail & Customer Service Experience")
 job("Sales Assistant", "Vans Outlet, London Designer Outlet, Wembley", "Jan 2026 – Sep 2026", [
-    "Served customers on the till, handling cash, card, refunds and exchanges with balanced cash-ups.",
-    "Received deliveries, priced and replenished stock, and kept shelves full, faced up and easy to shop.",
-    "Helped customers find the right fit and style across footwear and clothing.",
+    "Processed 100+ till transactions per shift, including refunds and exchanges, with balanced cash-ups.",
+    "Unpacked, tagged and replenished 300+ units of stock a week, keeping the shop floor full and tidy.",
+    "Helped 50+ customers a day find the right fit and style across footwear and clothing.",
 ])
 job("Front of House Team Member", "True Street Food, Manchester", "Oct 2024 – Apr 2025", [
     "Took orders and payments for 120+ customers per shift on EPOS during lunch and evening rushes.",
