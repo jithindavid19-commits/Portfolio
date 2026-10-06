@@ -61,10 +61,10 @@ para("Customer-focused retail and front of house professional with retail experi
      "marketing and an MSc in Digital Marketing focused on consumer behaviour, so understands what makes shoppers buy.")
 
 heading("Retail & Customer Service Experience")
-job("Sales Assistant", "[[Shop name]], Wembley, London", "Jan 2026 – Sep 2026", [
+job("Sales Assistant", "Vans Outlet, London Designer Outlet, Wembley", "Jan 2026 – Sep 2026", [
     "Served customers on the till, handling cash, card, refunds and exchanges with balanced end-of-shift cash-ups.",
     "Received deliveries, priced and replenished stock, and kept shelves full, faced up and easy to shop.",
-    "Helped customers find products and answered queries, recommending alternatives when items were out of stock.",
+    "Helped customers find the right fit and style across footwear and clothing, suggesting alternatives when sizes were out of stock.",
 ])
 job("Front of House Team Member", "True Street Food, Manchester", "Oct 2024 – Apr 2025", [
     "Took orders and payments for 120+ customers per shift on the EPOS system during lunch and evening rushes.",
