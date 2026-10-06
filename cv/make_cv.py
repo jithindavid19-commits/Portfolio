@@ -55,12 +55,17 @@ para("+44 7721 960626  |  jithindavid.19@gmail.com  |  linkedin.com/in/jithin-ge
 para("Available for Full-Time and Part-Time Roles", after=2)
 
 heading("Professional Summary")
-para("Customer-focused retail and front of house professional with fashion retail experience in India and busy "
+para("Customer-focused retail and front of house professional with retail experience in the UK and India and busy "
      "hospitality roles in the UK. Confident on the till, on the shop floor and with stock, with a sharp eye for "
      "display standards and a friendly, professional manner under pressure. Backed by three years in client-facing "
      "marketing and an MSc in Digital Marketing focused on consumer behaviour, so understands what makes shoppers buy.")
 
 heading("Retail & Customer Service Experience")
+job("Sales Assistant", "[[Shop name]], Wembley, London", "Jan 2026 – Sep 2026", [
+    "Served customers on the till, handling cash, card, refunds and exchanges with balanced end-of-shift cash-ups.",
+    "Received deliveries, priced and replenished stock, and kept shelves full, faced up and easy to shop.",
+    "Helped customers find products and answered queries, recommending alternatives when items were out of stock.",
+])
 job("Front of House Team Member", "True Street Food, Manchester", "Oct 2024 – Apr 2025", [
     "Took orders and payments for 120+ customers per shift on the EPOS system during lunch and evening rushes.",
     "Recommended sides and drinks to customers, helping to lift average spend per order.",
