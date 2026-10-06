@@ -27,6 +27,12 @@ def runs(p, text, bold=False, size=None):
         if i % 2: r.font.highlight_color = WD_COLOR_INDEX.YELLOW
     return p
 
+
+def link(p, text, url):
+    r_id = p.part.relate_to(url, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink", is_external=True)
+    h = OxmlElement("w:hyperlink"); h.set(qn("r:id"), r_id)
+    r = p.add_run(text); h.append(r._r); p._p.append(h)
+
 def para(text="", bold=False, size=None, after=0, before=0):
     p = doc.add_paragraph(); runs(p, text, bold, size)
     p.paragraph_format.space_after = Pt(after); p.paragraph_format.space_before = Pt(before)
@@ -51,7 +57,10 @@ def job(title, place, dates, bullets):
 
 name = para("JITHIN GEORGE", bold=True, size=20, after=3)
 para("Wembley Park, London HA9 0TT")
-para("+44 7721 960626  |  jithindavid.19@gmail.com  |  linkedin.com/in/jithin-george-jj1999")
+p = para("+44 7721 960626  |  ")
+link(p, "jithindavid.19@gmail.com", "mailto:jithindavid.19@gmail.com")
+runs(p, "  |  ")
+link(p, "linkedin.com/in/jithin-george-jj1999", "https://www.linkedin.com/in/jithin-george-jj1999")
 para("Available for Full-Time and Part-Time Roles", after=2)
 
 heading("Professional Summary")
