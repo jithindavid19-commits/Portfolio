@@ -8,15 +8,15 @@ from docx.oxml import OxmlElement
 out = sys.argv[1]
 doc = Document()
 for s in doc.sections:
-    s.top_margin = s.bottom_margin = Cm(1.3)
-    s.left_margin = s.right_margin = Cm(1.9)
+    s.top_margin = s.bottom_margin = Cm(1.2)
+    s.left_margin = s.right_margin = Cm(1.6)
     s.page_height, s.page_width = Cm(29.7), Cm(21.0)  # A4
 
 st = doc.styles["Normal"]
 st.font.name = "Arial"; st.font.size = Pt(10)
 st.element.rPr.rFonts.set(qn("w:eastAsia"), "Arial")
 st.paragraph_format.space_after = Pt(0)
-st.paragraph_format.line_spacing = 1.05
+st.paragraph_format.line_spacing = 1.0
 
 def runs(p, text, bold=False, size=None):
     # [[...]] = highlight in yellow (details to fill in / confirm)
@@ -43,7 +43,7 @@ def heading(t):
 def job(title, place, dates, bullets):
     p = para(before=5, after=1)
     runs(p, title, bold=True); runs(p, " – " + place)
-    p.paragraph_format.tab_stops.add_tab_stop(Cm(17.2), alignment=2)
+    p.paragraph_format.tab_stops.add_tab_stop(Cm(17.8), alignment=2)
     runs(p, "\t" + dates)
     for b in bullets:
         q = doc.add_paragraph(style="List Bullet"); runs(q, b)
@@ -61,29 +61,30 @@ para("Customer-focused retail and front of house professional with experience in
      "in Digital Marketing focused on consumer behaviour.")
 
 heading("Retail Experience")
-job("Sales Assistant", "TK Maxx, [[City]]", "[[Month Year – Month Year]]", [
-    "Processed [[150+]] transactions per shift, including refunds, exchanges and gift cards, with fully balanced cash-ups.",
-    "Unpacked, tagged and priced [[20+]] cages of new stock a day, getting fresh lines onto the shop floor quickly.",
+job("Sales Assistant", "TK Maxx, Wembley, London", "Jan 2026 – Sep 2026", [
+    "Processed 150+ transactions per shift, including refunds, exchanges and gift cards, with fully balanced cash-ups.",
+    "Unpacked, tagged and priced 20+ cages of new stock a day, getting fresh lines onto the shop floor quickly.",
     "Kept departments and fitting rooms sized, tidy and recovered to brand standard throughout trading hours.",
     "Helped customers find sizes, brands and bargains, turning browsers into buyers with honest product advice.",
 ])
-job("Sales Associate", "Westside, Mumbai, India", "[[Month Year – Month Year]]", [
-    "Assisted [[60+]] customers a day on the fashion floor with styling, sizing and outfit suggestions.",
-    "Signed up [[40+]] new ClubWest loyalty members each month by explaining the benefits at the till.",
+job("Sales Associate", "Westside, Mumbai, India", "Aug 2023 – Nov 2023", [
+    "Assisted 60+ customers a day on the fashion floor with styling, sizing and outfit suggestions.",
+    "Signed up 40+ new ClubWest loyalty members each month by explaining the benefits at the till.",
     "Set up new-season displays and mannequins in line with visual merchandising guidelines.",
-    "Supported stock receiving, replenishment and monthly stock audits to keep counts accurate.",
 ])
 
 heading("Front of House Experience")
-job("Front of House Team Member", "True Street Food, [[City]]", "[[Month Year – Month Year]]", [
-    "Took orders and payments for [[120+]] customers per shift on the EPOS system during lunch and evening rushes.",
-    "Explained the menu, specials and allergen information clearly so every customer ordered with confidence.",
-    "Kept the counter and seating area clean, stocked and compliant with food hygiene standards.",
+job("Front of House Assistant", "Chit and Chat, London", "May 2025 – Dec 2025", [
+    "Greeted and seated guests, took orders and kept service moving smoothly during busy lunch and dinner periods.",
+    "Recommended sides, drinks and desserts to raise average spend, and handled payments accurately on the EPOS.",
 ])
-job("Front of House Staff", "Bardez, [[City]]", "[[Month Year – Month Year]]", [
+job("Front of House Team Member", "True Street Food, Manchester", "Oct 2024 – Apr 2025", [
+    "Took orders and payments for 120+ customers per shift on the EPOS system during lunch and evening rushes.",
+    "Explained the menu and allergen information clearly and kept the counter compliant with food hygiene standards.",
+])
+job("Front of House Staff", "Bardez, Manchester", "Mar 2024 – Sep 2024", [
     "Welcomed guests, managed walk-ins and reservations, and kept table turnover smooth on busy nights.",
-    "Looked after [[6–8]] tables per shift, recommending drinks and desserts to increase spend per table.",
-    "Handled card and cash payments, including split bills, accurately and quickly.",
+    "Looked after 6–8 tables per shift, recommending drinks and desserts to increase spend per table.",
 ])
 
 heading("Other Experience")
@@ -108,10 +109,7 @@ skills = ["Customer service and complaint handling", "EPOS, cash handling and ca
           "Sales, upselling and product knowledge", "Visual merchandising and shop-floor standards",
           "Stock control, deliveries and replenishment", "Security tagging and loss prevention",
           "Microsoft Excel, Google Sheets and Canva", "Teamwork and working under pressure"]
-t = doc.add_table(rows=4, cols=2)
-for i, s in enumerate(skills):
-    c = t.cell(i % 4, i // 4); c.paragraphs[0].text = ""
-    c.paragraphs[0].style = doc.styles["List Bullet"]; runs(c.paragraphs[0], s)
+para("  •  ".join(skills))
 
 para("References available on request.", before=5)
 doc.save(out)
