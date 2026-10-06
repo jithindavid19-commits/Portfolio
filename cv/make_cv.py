@@ -124,5 +124,4 @@ t = doc.add_table(rows=4, cols=2)
 for i, sk in enumerate(skills):
     c = t.cell(i % 4, i // 4); c.paragraphs[0].style = doc.styles["List Bullet"]; runs(c.paragraphs[0], sk)
 
-para("References available on request.", before=5)
 doc.save(out)
