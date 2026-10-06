@@ -38,10 +38,10 @@ def rule(p):
     b.append(bt); pPr.append(b)
 
 def heading(t):
-    p = para(t.upper(), bold=True, size=11.5, before=9, after=4); rule(p)
+    p = para(t.upper(), bold=True, size=11.5, before=8, after=3); rule(p)
 
 def job(title, place, dates, bullets):
-    p = para(before=7, after=2)
+    p = para(before=5, after=1)
     runs(p, title, bold=True); runs(p, " – " + place)
     p.paragraph_format.tab_stops.add_tab_stop(Cm(17.2), alignment=2)
     runs(p, "\t" + dates)
@@ -55,43 +55,47 @@ para("+44 7721 960626  |  jithindavid.19@gmail.com  |  linkedin.com/in/jithin-ge
 para("Available for Full-Time and Part-Time Roles  |  Flexible across Weekends, Evenings and Bank Holidays", after=2)
 
 heading("Professional Summary")
-para("Friendly, dependable retail and customer service professional with UK experience on the front of house "
-     "and in a busy warehouse, backed by three years in client-facing marketing roles. Comfortable on the shop "
-     "floor, at the till and in the stockroom, with a good eye for product presentation and a habit of keeping "
-     "track of the numbers that matter – sales, stock and customer feedback. MSc Digital Marketing graduate "
-     "(dissertation on consumer behaviour) who understands what makes customers buy and come back.")
+para("Customer-focused retail and front of house professional with experience in fashion retail in India and the UK, "
+     "including TK Maxx, alongside busy hospitality roles in the UK. Confident on the till, on the shop floor and in the "
+     "stockroom, with a sharp eye for display standards. Backed by three years in client-facing marketing and an MSc "
+     "in Digital Marketing focused on consumer behaviour.")
 
-heading("Retail & Customer Service Experience")
-job("Front of House Team Member (Part-time)", "[[Venue name]], Manchester", "[[Month 2024 – Month 2025]]", [
-    "Served [[150+]] customers per shift at peak times, keeping queues moving while staying warm and welcoming.",
-    "Took cash and card payments on the EPOS till with [[zero]] discrepancies at end-of-shift cash-ups.",
-    "Suggested add-ons and current promotions to help increase average spend per customer.",
-    "Dealt with complaints and queries calmly on the spot, passing to a manager only when needed.",
-    "Kept the customer area clean, well stocked and in line with health, safety and food hygiene rules.",
+heading("Retail Experience")
+job("Sales Assistant", "TK Maxx, [[City]]", "[[Month Year – Month Year]]", [
+    "Processed [[150+]] transactions per shift, including refunds, exchanges and gift cards, with fully balanced cash-ups.",
+    "Unpacked, tagged and priced [[20+]] cages of new stock a day, getting fresh lines onto the shop floor quickly.",
+    "Kept departments and fitting rooms sized, tidy and recovered to brand standard throughout trading hours.",
+    "Helped customers find sizes, brands and bargains, turning browsers into buyers with honest product advice.",
 ])
-job("Warehouse Operative (Part-time)", "[[Company name]], Manchester", "[[Month 2024 – Month 2025]]", [
-    "Picked, packed and dispatched [[100+]] orders per shift with a handheld scanner, meeting daily pick targets.",
-    "Checked incoming deliveries against delivery notes and reported damaged or missing items.",
-    "Supported weekly stock counts and replenishment so products were accurate and easy to locate.",
-    "Followed manual handling and health and safety procedures in a fast-paced environment.",
+job("Sales Associate", "Westside, Mumbai, India", "[[Month Year – Month Year]]", [
+    "Assisted [[60+]] customers a day on the fashion floor with styling, sizing and outfit suggestions.",
+    "Signed up [[40+]] new ClubWest loyalty members each month by explaining the benefits at the till.",
+    "Set up new-season displays and mannequins in line with visual merchandising guidelines.",
+    "Supported stock receiving, replenishment and monthly stock audits to keep counts accurate.",
+])
+
+heading("Front of House Experience")
+job("Front of House Team Member", "True Street Food, [[City]]", "[[Month Year – Month Year]]", [
+    "Took orders and payments for [[120+]] customers per shift on the EPOS system during lunch and evening rushes.",
+    "Explained the menu, specials and allergen information clearly so every customer ordered with confidence.",
+    "Kept the counter and seating area clean, stocked and compliant with food hygiene standards.",
+])
+job("Front of House Staff", "Bardez, [[City]]", "[[Month Year – Month Year]]", [
+    "Welcomed guests, managed walk-ins and reservations, and kept table turnover smooth on busy nights.",
+    "Looked after [[6–8]] tables per shift, recommending drinks and desserts to increase spend per table.",
+    "Handled card and cash payments, including split bills, accurately and quickly.",
 ])
 
 heading("Other Experience")
 job("Marketing Executive", "Qyuki (Remote)", "Mar 2024 – Present", [
-    "Look after 8–12 client accounts each campaign cycle, meeting 100% of delivery targets through planning and regular follow-ups.",
+    "Look after 8–12 client accounts each campaign cycle, meeting 100% of delivery targets.",
     "Grew the partner contact list from 300 to 450+, opening up 25% more partnership opportunities.",
-    "Ran 4 campaigns from first brief to final delivery, keeping clients informed at every stage.",
-    "Track KPIs in Excel and Trello and create client presentations in Canva.",
 ])
 job("Influencer Marketing Executive", "Tring", "Jul 2022 – Apr 2023", [
-    "Onboarded 10+ creators per campaign, managing contracts, timelines and deliverables.",
-    "Built and maintained a database of 500+ creators, making it quicker to match brands with the right people.",
-    "Reviewed results across 60+ posts (reach, impressions, engagement) to choose top performers for repeat work.",
+    "Onboarded 10+ creators per campaign and built a database of 500+ creators for faster brand matching.",
 ])
 job("Talent Coordinator", "Aspiring Productions (Reality Show)", "May 2022 – Dec 2022", [
-    "Sourced 300+ applicants through social media and ran online auditions for 250+ participants.",
-    "Worked with a 4–6 person production team to organise audition schedules and availability.",
-    "Set up a shared Excel tracker that cut turnaround time by 40%.",
+    "Ran online auditions for 250+ participants and set up an Excel tracker that cut turnaround time by 40%.",
 ])
 
 heading("Education")
@@ -102,12 +106,12 @@ p = para(); runs(p, "BA Mass Media and Communication", bold=True); runs(p, " –
 heading("Key Skills")
 skills = ["Customer service and complaint handling", "EPOS, cash handling and card payments",
           "Sales, upselling and product knowledge", "Visual merchandising and shop-floor standards",
-          "Stock control, deliveries and replenishment", "Handheld scanners and stock counts",
+          "Stock control, deliveries and replenishment", "Security tagging and loss prevention",
           "Microsoft Excel, Google Sheets and Canva", "Teamwork and working under pressure"]
 t = doc.add_table(rows=4, cols=2)
 for i, s in enumerate(skills):
     c = t.cell(i % 4, i // 4); c.paragraphs[0].text = ""
     c.paragraphs[0].style = doc.styles["List Bullet"]; runs(c.paragraphs[0], s)
 
-para("References available on request.", before=8)
+para("References available on request.", before=5)
 doc.save(out)
