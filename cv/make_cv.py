@@ -52,7 +52,7 @@ def job(title, place, dates, bullets):
 name = para("JITHIN GEORGE", bold=True, size=20, after=3)
 para("Wembley Park, London HA9 0TT")
 para("+44 7721 960626  |  jithindavid.19@gmail.com  |  linkedin.com/in/jithin-george-jj1999")
-para("Available for Full-Time and Part-Time Roles  |  Flexible across Weekends, Evenings and Bank Holidays", after=2)
+para("Available for Full-Time and Part-Time Roles", after=2)
 
 heading("Professional Summary")
 para("Customer-focused retail and front of house professional with experience in fashion retail in India and the UK, "
