@@ -55,36 +55,27 @@ para("+44 7721 960626  |  jithindavid.19@gmail.com  |  linkedin.com/in/jithin-ge
 para("Available for Full-Time and Part-Time Roles", after=2)
 
 heading("Professional Summary")
-para("Customer-focused retail and front of house professional with experience in fashion retail in India and the UK, "
-     "including TK Maxx, alongside busy hospitality roles in the UK. Confident on the till, on the shop floor and in the "
-     "stockroom, with a sharp eye for display standards. Backed by three years in client-facing marketing and an MSc "
-     "in Digital Marketing focused on consumer behaviour.")
+para("Customer-focused retail and front of house professional with fashion retail experience in India and busy "
+     "hospitality roles in the UK. Confident on the till, on the shop floor and with stock, with a sharp eye for "
+     "display standards and a friendly, professional manner under pressure. Backed by three years in client-facing "
+     "marketing and an MSc in Digital Marketing focused on consumer behaviour, so understands what makes shoppers buy.")
 
-heading("Retail Experience")
-job("Sales Assistant", "TK Maxx, Wembley, London", "Jan 2026 – Sep 2026", [
-    "Processed 150+ transactions per shift, including refunds, exchanges and gift cards, with fully balanced cash-ups.",
-    "Unpacked, tagged and priced 20+ cages of new stock a day, getting fresh lines onto the shop floor quickly.",
-    "Kept departments and fitting rooms sized, tidy and recovered to brand standard throughout trading hours.",
-    "Helped customers find sizes, brands and bargains, turning browsers into buyers with honest product advice.",
-])
-job("Sales Associate", "Westside, Mumbai, India", "Aug 2023 – Nov 2023", [
-    "Assisted 60+ customers a day on the fashion floor with styling, sizing and outfit suggestions.",
-    "Signed up 40+ new ClubWest loyalty members each month by explaining the benefits at the till.",
-    "Set up new-season displays and mannequins in line with visual merchandising guidelines.",
-])
-
-heading("Front of House Experience")
-job("Front of House Assistant", "Chit and Chat, London", "May 2025 – Dec 2025", [
-    "Greeted and seated guests, took orders and kept service moving smoothly during busy lunch and dinner periods.",
-    "Recommended sides, drinks and desserts to raise average spend, and handled payments accurately on the EPOS.",
-])
+heading("Retail & Customer Service Experience")
 job("Front of House Team Member", "True Street Food, Manchester", "Oct 2024 – Apr 2025", [
     "Took orders and payments for 120+ customers per shift on the EPOS system during lunch and evening rushes.",
+    "Recommended sides and drinks to customers, helping to lift average spend per order.",
     "Explained the menu and allergen information clearly and kept the counter compliant with food hygiene standards.",
 ])
 job("Front of House Staff", "Bardez, Manchester", "Mar 2024 – Sep 2024", [
     "Welcomed guests, managed walk-ins and reservations, and kept table turnover smooth on busy nights.",
     "Looked after 6–8 tables per shift, recommending drinks and desserts to increase spend per table.",
+    "Handled card and cash payments, including split bills, accurately and quickly.",
+])
+job("Sales Associate", "Westside, Mumbai, India", "Aug 2023 – Nov 2023", [
+    "Assisted 60+ customers a day on the fashion floor with styling, sizing and outfit suggestions.",
+    "Signed up 40+ new ClubWest loyalty members each month by explaining the benefits at the till.",
+    "Set up new-season displays and mannequins in line with visual merchandising guidelines.",
+    "Supported stock receiving, replenishment and monthly stock audits to keep counts accurate.",
 ])
 
 heading("Other Experience")
@@ -107,7 +98,7 @@ p = para(); runs(p, "BA Mass Media and Communication", bold=True); runs(p, " –
 heading("Key Skills")
 skills = ["Customer service and complaint handling", "EPOS, cash handling and card payments",
           "Sales, upselling and product knowledge", "Visual merchandising and shop-floor standards",
-          "Stock control, deliveries and replenishment", "Security tagging and loss prevention",
+          "Stock control, deliveries and replenishment", 
           "Microsoft Excel, Google Sheets and Canva", "Teamwork and working under pressure"]
 para("  •  ".join(skills))
 
