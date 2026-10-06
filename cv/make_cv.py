@@ -62,14 +62,14 @@ para("Customer-focused retail and front of house professional with retail experi
 
 heading("Retail & Customer Service Experience")
 job("Sales Assistant", "Vans Outlet, London Designer Outlet, Wembley", "Jan 2026 – Sep 2026", [
-    "Served customers on the till, handling cash, card, refunds and exchanges with balanced end-of-shift cash-ups.",
+    "Served customers on the till, handling cash, card, refunds and exchanges with balanced cash-ups.",
     "Received deliveries, priced and replenished stock, and kept shelves full, faced up and easy to shop.",
-    "Helped customers find the right fit and style across footwear and clothing, suggesting alternatives when sizes were out of stock.",
+    "Helped customers find the right fit and style across footwear and clothing.",
 ])
 job("Front of House Team Member", "True Street Food, Manchester", "Oct 2024 – Apr 2025", [
-    "Took orders and payments for 120+ customers per shift on the EPOS system during lunch and evening rushes.",
+    "Took orders and payments for 120+ customers per shift on EPOS during lunch and evening rushes.",
     "Recommended sides and drinks to customers, helping to lift average spend per order.",
-    "Explained the menu and allergen information clearly and kept the counter compliant with food hygiene standards.",
+    "Explained menu and allergen information clearly and followed food hygiene standards.",
 ])
 job("Front of House Staff", "Bardez, Manchester", "Mar 2024 – Sep 2024", [
     "Welcomed guests, managed walk-ins and reservations, and kept table turnover smooth on busy nights.",
@@ -87,12 +87,18 @@ heading("Other Experience")
 job("Marketing Executive", "Qyuki (Remote)", "Mar 2024 – Present", [
     "Look after 8–12 client accounts each campaign cycle, meeting 100% of delivery targets.",
     "Grew the partner contact list from 300 to 450+, opening up 25% more partnership opportunities.",
+    "Delivered 4 end-to-end campaigns, keeping clients updated from first brief to final delivery.",
+    "Track KPIs and deliverables in Excel and Trello, and build client presentations in Canva.",
 ])
 job("Influencer Marketing Executive", "Tring", "Jul 2022 – Apr 2023", [
-    "Onboarded 10+ creators per campaign and built a database of 500+ creators for faster brand matching.",
+    "Onboarded 10+ creators per campaign, managing contracts, timelines and deliverables.",
+    "Built and maintained a database of 500+ creators for faster brand–creator matching.",
+    "Analysed reach and engagement across 60+ posts to pick top performers for repeat campaigns.",
 ])
 job("Talent Coordinator", "Aspiring Productions (Reality Show)", "May 2022 – Dec 2022", [
-    "Ran online auditions for 250+ participants and set up an Excel tracker that cut turnaround time by 40%.",
+    "Sourced 300+ applicants through Facebook, Instagram and YouTube, tracking each one in Excel.",
+    "Ran online auditions for 250+ participants, recording scores, feedback and shortlisting decisions.",
+    "Set up a central Excel tracker that cut audition turnaround time by 40%.",
 ])
 
 heading("Education")
@@ -103,9 +109,11 @@ p = para(); runs(p, "BA Mass Media and Communication", bold=True); runs(p, " –
 heading("Key Skills")
 skills = ["Customer service and complaint handling", "EPOS, cash handling and card payments",
           "Sales, upselling and product knowledge", "Visual merchandising and shop-floor standards",
-          "Stock control, deliveries and replenishment", 
+          "Stock control, deliveries and replenishment", "Opening, closing and cash-up procedures",
           "Microsoft Excel, Google Sheets and Canva", "Teamwork and working under pressure"]
-para("  •  ".join(skills))
+t = doc.add_table(rows=4, cols=2)
+for i, sk in enumerate(skills):
+    c = t.cell(i % 4, i // 4); c.paragraphs[0].style = doc.styles["List Bullet"]; runs(c.paragraphs[0], sk)
 
 para("References available on request.", before=5)
 doc.save(out)
