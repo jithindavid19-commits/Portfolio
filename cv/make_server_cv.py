@@ -13,10 +13,10 @@ for s in doc.sections:
     s.page_height, s.page_width = Cm(29.7), Cm(21.0)  # A4
 
 st = doc.styles["Normal"]
-st.font.name = "Arial"; st.font.size = Pt(10)
+st.font.name = "Arial"; st.font.size = Pt(10.5)
 st.element.rPr.rFonts.set(qn("w:eastAsia"), "Arial")
 st.paragraph_format.space_after = Pt(0)
-st.paragraph_format.line_spacing = 1.0
+st.paragraph_format.line_spacing = 1.2
 
 def runs(p, text, bold=False, size=None):
     # [[...]] = highlight in yellow (details to fill in / confirm)
@@ -44,16 +44,16 @@ def rule(p):
     b.append(bt); pPr.append(b)
 
 def heading(t):
-    p = para(t.upper(), bold=True, size=11.5, before=8, after=3); rule(p)
+    p = para(t.upper(), bold=True, size=11.5, before=15, after=6); rule(p)
 
 def job(title, place, dates, bullets):
-    p = para(before=5, after=1)
+    p = para(before=10, after=3)
     runs(p, title, bold=True); runs(p, " – " + place)
     p.paragraph_format.tab_stops.add_tab_stop(Cm(17.8), alignment=2)
     runs(p, "\t" + dates)
     for b in bullets:
         q = doc.add_paragraph(style="List Bullet"); runs(q, b)
-        q.paragraph_format.space_after = Pt(1)
+        q.paragraph_format.space_after = Pt(1.5)
 
 name = para("JITHIN GEORGE", bold=True, size=20, after=3)
 para("Wembley, London HA9 0TT")
@@ -76,12 +76,13 @@ job("Restaurant Supervisor", "Tru Street Food, UK", "Mar 2025 – Sep 2026", [
     "Trained and supported new and junior team members on service standards, the menu and the EPOS.",
     "Handled guest feedback and complaints professionally, escalating to management when appropriate.",
     "Kept kitchen and front of house in sync during peak hours so food went out hot, accurate and on time.",
-    "Oversaw opening and closing, cashing up, stock checks, health and safety and food hygiene compliance.",
+    "Oversaw opening and closing, cashing up, stock checks and food safety compliance.",
 ])
 job("Front of House Staff", "Chit n Chaat, UK", "Dec 2024 – Mar 2025", [
-    "Greeted and served guests across eat-in and takeaway during high-volume shifts with speed and warmth.",
+    "Served eat-in and takeaway guests during high-volume shifts with speed and warmth.",
     "Guided guests through the menu and handled special requests, helping them order with confidence.",
     "Stepped in to support teammates in rush periods, cutting wait times and keeping service flowing.",
+    "Passed orders clearly to the kitchen so food went out quickly and accurately at busy times.",
     "Kept the section clean, restocked and well presented in line with food safety standards.",
 ])
 job("Front of House Staff", "Bardez, UK", "Mar 2024 – Nov 2024", [
