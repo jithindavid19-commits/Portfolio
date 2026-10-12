@@ -64,7 +64,7 @@ link(p, "linkedin.com/in/jithin-george-jj1999", "https://www.linkedin.com/in/jit
 para("Available for Full-Time and Part-Time Roles", after=2)
 
 heading("Professional Summary")
-para("Warm, food-loving front of house professional with 2.5 years in busy casual dining, street food and "
+para("Front of house professional with 2.5 years in busy casual dining, street food and "
      "restaurant settings, most recently as a Restaurant Supervisor. Takes full ownership of a section from set-up to "
      "close, reads guests' needs early and gives every table an attentive, informed and personalised experience. Calm "
      "under pressure, quick with the kitchen and bar, and always ready to step in for the team at peak times.")
