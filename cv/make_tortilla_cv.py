@@ -79,13 +79,13 @@ job("Restaurant Supervisor", "Tru Street Food, UK", "Mar 2025 – Sep 2026", [
     "Oversaw opening and closing, cashing up, stock checks and food safety compliance.",
 ])
 job("Shift Supervisor", "Bardez, UK", "Aug 2024 – Mar 2025", [
+    "Ran the floor during shifts, allocating sections and keeping service on track at peak times.",
+    "Coached new team members on service standards, allergens and side duties during their first shifts.",
     "Welcomed guests warmly, managed reservations and walk-ins, and kept table turnover smooth.",
     "Explained dishes, ingredients and spice levels, helping guests choose with confidence.",
     "Handled allergen and dietary requests (vegan, gluten-free, nut allergies) accurately with the kitchen.",
     "Took orders and payments accurately on the EPOS, including split bills, card and cash.",
-    "Upsold sides, drinks and desserts to increase average spend per guest.",
     "Completed side duties, cleaning and restocking so the restaurant was ready for every shift.",
-    "Built rapport with regular guests and resolved feedback calmly, encouraging repeat visits.",
 ])
 job("Front of House Staff", "Chit n Chaat, UK", "Feb 2024 – Jul 2024", [
     "Served eat-in and takeaway guests during high-volume shifts with speed and a smile.",
