@@ -78,7 +78,7 @@ job("Restaurant Supervisor", "Tru Street Food, UK", "Mar 2025 – Sep 2026", [
     "Kept kitchen and front of house in sync during peak hours so food went out hot, accurate and on time.",
     "Oversaw opening and closing, cashing up, stock checks and food safety compliance.",
 ])
-job("Front of House Staff", "Bardez, UK", "Aug 2024 – Mar 2025", [
+job("Shift Supervisor", "Bardez, UK", "Aug 2024 – Mar 2025", [
     "Greeted and seated guests, managed reservations and walk-ins, and kept table turnover smooth.",
     "Owned a section of 6–8 tables, pacing each course with the kitchen for a relaxed guest experience.",
     "Explained dishes, ingredients and spice levels, and recommended wine and cocktail pairings.",
