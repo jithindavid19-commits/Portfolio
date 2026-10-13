@@ -78,14 +78,7 @@ job("Restaurant Supervisor", "Tru Street Food, UK", "Mar 2025 – Sep 2026", [
     "Kept kitchen and front of house in sync during peak hours so food went out hot, accurate and on time.",
     "Oversaw opening and closing, cashing up, stock checks and food safety compliance.",
 ])
-job("Front of House Staff", "Chit n Chaat, UK", "Dec 2024 – Mar 2025", [
-    "Served eat-in and takeaway guests during high-volume shifts with speed and warmth.",
-    "Guided guests through the menu and handled special requests, helping them order with confidence.",
-    "Stepped in to support teammates in rush periods, cutting wait times and keeping service flowing.",
-    "Passed orders clearly to the kitchen so food went out quickly and accurately at busy times.",
-    "Kept the section clean, restocked and well presented in line with food safety standards.",
-])
-job("Front of House Staff", "Bardez, UK", "Mar 2024 – Nov 2024", [
+job("Front of House Staff", "Bardez, UK", "Aug 2024 – Mar 2025", [
     "Greeted and seated guests, managed reservations and walk-ins, and kept table turnover smooth.",
     "Owned a section of 6–8 tables, pacing each course with the kitchen for a relaxed guest experience.",
     "Explained dishes, ingredients and spice levels, and recommended wine and cocktail pairings.",
@@ -94,6 +87,13 @@ job("Front of House Staff", "Bardez, UK", "Mar 2024 – Nov 2024", [
     "Took orders and payments accurately on the EPOS, including split bills, card and cash.",
     "Completed side duties, table settings, polishing and restocking so the section was ready for every shift.",
     "Built rapport with regular guests and resolved feedback calmly, encouraging repeat bookings.",
+])
+job("Front of House Staff", "Chit n Chaat, UK", "Feb 2024 – Jul 2024", [
+    "Served eat-in and takeaway guests during high-volume shifts with speed and warmth.",
+    "Guided guests through the menu and handled special requests, helping them order with confidence.",
+    "Stepped in to support teammates in rush periods, cutting wait times and keeping service flowing.",
+    "Passed orders clearly to the kitchen so food went out quickly and accurately at busy times.",
+    "Kept the section clean, restocked and well presented in line with food safety standards.",
 ])
 
 heading("Education")
